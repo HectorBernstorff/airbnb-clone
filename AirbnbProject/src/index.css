@@ -1,0 +1,121 @@
+:root {
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* width: 100%;
+  box-sizing: border-box;
+  border: 5px solid red;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+.headerTop{
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px solid red;
+}
+
+.innerHeaderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 5rem;
+
+  height: 80px;
+
+  max-width: 2360px;
+  margin: auto;
+
+}
+
+.profileSection {
+  display: flex;
+}
+
+.navBar {
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px solid blue;
+}
+
+.innerNavBar {
+  display: flex;
+  align-items: center;
+
+  padding: 0 5rem;
+  height: 98px;
+
+  max-width: 2360px;
+  margin: auto;
+
+  gap: 1rem;
+}
+
+.items {
+  flex-grow: 1;
+  background-color: yellow;
+  overflow: hidden;
+}
+
+main{
+  --collumns: 6;
+
+  display: grid;
+  grid-template-columns: repeat(var(--collumns), 1fr);
+
+  gap: 1.5rem;
+
+  /* padding: 2.5rem; */
+}
+
+@media screen and (max-width: 1080px) {
+
+}
+
+@media screen and (max-width: 1880px) {
+  main {
+    --collumns: 5;
+  }
+}
+
+@media screen and (max-width: 1640px) {
+  main {
+    --collumns: 4;
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  main {
+    --collumns: 3;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    --collumns: 2;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    --collumns: 1;
+  }
+}
+
+main{
+  /* margin: auto; */
+  /* padding: 0 5rem; */
+margin: 2rem auto 2rem auto;
+  padding: 0 5rem;
+
+  max-width: 2360px;
+}

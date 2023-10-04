@@ -1,0 +1,91 @@
+.propertie-card {
+    position: relative;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.propertie-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 19 / 18;
+}
+
+.propertie-card-wrapper {
+    position: relative;
+}
+
+.next-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+}
+
+.prev-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+}
+
+.prev-button,
+.next-button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: large;
+    font-style: arial;
+}
+
+.dot-indicators {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #bebebeb6;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    cursor: pointer;
+
+   max-width: 1000px;
+
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.propertieInfo {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 12px;
+}
+
+.propertieInfo div {
+    display: flex;
+    justify-content: space-between;
+    
+}
