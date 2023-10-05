@@ -1,0 +1,34 @@
+{
+  "hosts": [
+    {
+      "hostName": "John Doe",
+      "hostProperties": [
+        {
+          "title": "jhond",
+          "location": "Bali, Indonesia",
+          "guests": 8,
+          "bedrooms": 4,
+          "beds": 4,
+          "baths": 5,
+          "price": 600,
+          "description": "Experience the ultimate tropical paradise in our private villa with a pool and lush gardens."
+        }
+      ]
+    },
+    {
+      "hostName": "Jane Smith",
+      "hostProperties": [
+        {
+          "title": "Luxury Villa with Pool",
+          "location": "Bali, Indonesia",
+          "guests": 8,
+          "bedrooms": 4,
+          "beds": 4,
+          "baths": 5,
+          "price": 600,
+          "description": "Experience the ultimate tropical paradise in our private villa with a pool and lush gardens."
+        }
+      ]
+    }
+  ]
+}
