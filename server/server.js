@@ -16,6 +16,27 @@ app.get('/properties', async (req, res) => {
     }
   });
 
+  app.get('/properties/:hostname', async (req, res) => {
+    const hostname = req.params.hostname;
+  
+    try {
+      const propertiesData = await fs.readFile('./data.json', 'utf-8');
+      const jsonData = JSON.parse(propertiesData);
+      const property = jsonData.hosts.find((host) => host.hostName === hostname);
+  
+      if (!property) {
+        res.status(404).json({ error: 'Property not found' });
+        return;
+      }
+  
+      res.json(property);
+    } catch (error) {
+      console.error('Error reading data.json:', error);
+      res.status(500).json({ error: 'An error occurred while fetching property data' });
+    }
+  });
+  
+
   app.post('/updateProperty', async (req, res) => {
     try {
       // Read the current data from the JSON file

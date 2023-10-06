@@ -5,6 +5,8 @@ import Propertie from '../components/Propertie';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
+// ...
+
 function Home() {
   const [properties, setProperties] = useState([]);
   const navigate = useNavigate();
@@ -23,7 +25,7 @@ function Home() {
 
   function handlePropertyClick(propertyData) {
     // Navigate to the PropertiePage and pass the property data as state
-    navigate('/PropertiePage', { state: { propertyData } });
+    navigate(`/PropertiePage/${propertyData.hostName}`, { state: { propertyData } });
   }
 
   return (
@@ -42,3 +44,4 @@ function Home() {
 }
 
 export default Home;
+
