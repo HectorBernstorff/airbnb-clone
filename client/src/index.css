@@ -1,5 +1,5 @@
 :root {
-
+font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -7,64 +7,7 @@
   padding: 0;
 }
 
-header {
-  /* width: 100%;
-  box-sizing: border-box;
-  border: 5px solid red;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center; */
-}
-
-.headerTop{
-  width: 100%;
-  box-sizing: border-box;
-  border: 5px solid red;
-}
-
-.innerHeaderTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 5rem;
-
-  height: 80px;
-
-  max-width: 2360px;
-  margin: auto;
-
-}
-
-.profileSection {
-  display: flex;
-}
-
-.navBar {
-  width: 100%;
-  box-sizing: border-box;
-  border: 5px solid blue;
-}
-
-.innerNavBar {
-  display: flex;
-  align-items: center;
-
-  padding: 0 5rem;
-  height: 98px;
-
-  max-width: 2360px;
-  margin: auto;
-
-  gap: 1rem;
-}
-
-.items {
-  flex-grow: 1;
-  background-color: yellow;
-  overflow: hidden;
-}
 
 main{
   --collumns: 6;

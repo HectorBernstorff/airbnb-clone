@@ -1,0 +1,144 @@
+.spanImg img {
+    width: 6.5rem;
+}
+
+header {
+    /* width: 100%;
+    box-sizing: border-box;
+    border: 5px solid red;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
+  }
+  
+  .headerTop{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .innerHeaderTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 0 5rem;
+  
+    height: 80px;
+  
+    max-width: 2360px;
+    margin: auto;
+
+    position: relative;
+  
+  }
+  
+  .profileSection {
+    display: flex;
+  }
+  
+  .navBar {
+    width: 100%;
+    box-sizing: border-box;
+    border: 5px solid blue;
+  }
+  
+  .innerNavBar {
+    display: flex;
+    align-items: center;
+  
+    padding: 0 5rem;
+    height: 98px;
+  
+    max-width: 2360px;
+    margin: auto;
+  
+    gap: 1rem;
+  }
+  
+  .items {
+    flex-grow: 1;
+    background-color: yellow;
+    overflow: hidden;
+  }
+
+  .searchWrapper {
+  
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 50px;
+    height: 3rem;
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 0 1.5rem;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    
+  }
+
+  .searchWrapper hr {
+    color: rgba(0, 0, 0, 0.132);
+  }
+
+  .searchWrapper div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    gap: 1.5rem;
+  }
+
+  .searchWrapper span {
+    padding: 0.25rem 0;
+  }
+
+  .searchWrapper button {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    background-color: #FF385C;
+
+    border: none;
+
+    padding: 0.5rem;
+
+    border-radius: 25px;
+  }
+
+  .profileSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 14px;
+  }
+
+  .profileSection svg {
+    width: 1.25rem;
+  }
+
+  .profileWrapper {
+    border: 1px solid rgba(0, 0, 0, 0.166);
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.25rem;
+
+    border-radius: 50px;
+  }
+  #profileSVG {
+    width: 2rem;
+  }

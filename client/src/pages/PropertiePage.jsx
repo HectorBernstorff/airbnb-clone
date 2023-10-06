@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import propertiePictures from '../assets/Images/BbackgroundPicture.jpg';
 
 
 export default function PropertiePage() {
@@ -68,21 +69,21 @@ export default function PropertiePage() {
                 return property;
             }),
         };
-    
+
         try {
             // Send a POST request to update the JSON data on the server
             await axios.post(`http://localhost:5000/updateProperty/${hostname}`, updatedPropertyData);
-    
+
             // Update the local propertyData state with the new values
             setPropertyData(updatedPropertyData);
-    
+
             // Disable edit mode
             setIsEditMode(false);
         } catch (error) {
             console.error('Error updating property data:', error);
         }
     };
-    
+
 
 
 
@@ -98,14 +99,10 @@ export default function PropertiePage() {
 
     return (
         <>
-
             <Header />
-
             <div>
                 {isEditMode ? (
                     <>
-
-
                         <div className='editWrapper'>
                             <div className='box'>
                                 <div>
@@ -140,37 +137,115 @@ export default function PropertiePage() {
                                     <label htmlFor="">Description</label>
                                     <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                                 </div>
-
                                 <button onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
-
-
-
                                 <button onClick={handleCancel}>Cancelar</button>
-
                             </div>
                         </div>
-
                     </>
                 ) : (
                     <button onClick={handleEdit}>Editar</button>
                 )}
             </div>
 
-            <h2 className='title'>{propertyData.hostProperties[0].title}</h2>
+            <div className='propertyWrapper'>
 
-            <span className='location'>{propertyData.hostProperties[0].location}</span>
+                <div className='propertire-main'>
+                    <div className='propertieTitle'>
+                        <h2 className='title'>{propertyData.hostProperties[0].title}</h2>
+                        <div className='titleInfo'>
+                            <div>
+                                <div>
+                                    <span className='location'>{propertyData.hostProperties[0].location}</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <span>*</span>
+                                    <span>Share</span>
+                                </div>
+                                <div>
+                                    <span>*</span>
+                                    <span>Save</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='propertie-image-grid-wrapper'>
+                        <div className='propertie-image-grid'>
+                            <img className='propertie-image-grid-col-2 propertie-image-grid-row-2' src={propertiePictures} alt='' />
+                            <img src={propertiePictures} alt='' />
+                            <img src={propertiePictures} alt='' />
+                            <img src={propertiePictures} alt='' />
+                            <img src={propertiePictures} alt='' />
+                        </div>
+                    </div>
+                </div>
+                <div className='infosWrapper'>
+                    <div className='description'>
+                        <div className='infoBelow'>
+                            <h3>Entire cottage hosted by {propertyData.hostProperties[0].hostName}</h3>
+                            <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
+                            <span>·</span>
+                            <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
+                            <span>·</span>
+                            <span className='bed'>{propertyData.hostProperties[0].beds} beds</span>
+                            <span>·</span>
+                            <span className='bath'>{propertyData.hostProperties[0].baths} baths</span>
+                        </div>
+                        <hr />
+                        <div>
+                            <span className=''>
+                                {propertyData.hostProperties[0].description}
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                            </span>
+                        </div>
+                    </div>
+                    <div className='priceDetails'>
+                        <div className='priceTitle'>
+                            <div><span className='priceNight'>$228 CAD </span><span>night</span></div>
+                            <span className='rating'>4.92</span>
+                        </div>
+                        <div className='dateDetails'>
+                            <div>
+                                <div id='borderLeft' className='lineBreak'>
+                                    <span>Checkin</span>
+                                    <span>10-23-2023</span>
+                                </div>
+                                <div id='borderRight' className='lineBreak'>
+                                    <span>Checkout</span>
+                                    <span>10-28-2023</span>
+                                </div>
+                            </div>
+                            <div id='borderBottom' className='lineBreak'>
+                                <span>Guests</span>
+                                <span>1 guest</span>
+                            </div>
 
-            <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
+                        </div>
+                        
+                        <div className='reserveSection'>
+                            <button>RESERVE</button>
+                            <span>You won't be charged yet</span>
+                        </div>
+                        <hr />
+                        <div className='priceTotal'>
+                            <span>Total</span>
+                            <span>$1,964 CAD</span>
+                        </div>
+                    </div>
+                </div>
+            </div >
 
-            <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
-
-            <span className='bed'>{propertyData.hostProperties[0].beds} beds</span>
-
-            <span className='bath'>{propertyData.hostProperties[0].baths} baths</span>
-
-            <span className='description'>{propertyData.hostProperties[0].description}</span>
-
-            <span>${propertyData.hostProperties[0].price} CAD night</span>
+            {/* <div>
+                <h2 className='title'>{propertyData.hostProperties[0].title}</h2>
+                <span className='location'>{propertyData.hostProperties[0].location}</span>
+                <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
+                <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
+                <span className='bed'>{propertyData.hostProperties[0].beds} beds</span>
+                <span className='bath'>{propertyData.hostProperties[0].baths} baths</span>
+                <span className='description'>{propertyData.hostProperties[0].description}</span>
+                <span>${propertyData.hostProperties[0].price} CAD night</span>
+            </div> */}
 
         </>
     )
