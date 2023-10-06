@@ -19,7 +19,7 @@ export default function PropertiePage() {
     const [baths, setBaths] = useState(propertyData.hostProperties[0].baths);
     const [price, setPrice] = useState(propertyData.hostProperties[0].price);
     const [description, setDescription] = useState(propertyData.hostProperties[0].description);
-    
+
 
 
 
@@ -33,15 +33,15 @@ export default function PropertiePage() {
 
     const fetchData = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/properties/${hostname}`); // Update the endpoint to accept the hostname
-          const data = response.data;
-          setPropertyData(data);
+            const response = await axios.get(`http://localhost:5000/properties/${hostname}`); // Update the endpoint to accept the hostname
+            const data = response.data;
+            setPropertyData(data);
         } catch (error) {
-          console.error('Error loading data:', error);
+            console.error('Error loading data:', error);
         }
-      };
-      
-    
+    };
+
+
 
     const handleEdit = () => {
         setIsEditMode(true);
@@ -71,7 +71,7 @@ export default function PropertiePage() {
     
         try {
             // Send a POST request to update the JSON data on the server
-            await axios.post('http://localhost:5000/updateProperty', updatedPropertyData);
+            await axios.post(`http://localhost:5000/updateProperty/${hostname}`, updatedPropertyData);
     
             // Update the local propertyData state with the new values
             setPropertyData(updatedPropertyData);
@@ -83,11 +83,12 @@ export default function PropertiePage() {
         }
     };
     
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
     const handleCancel = () => {
         // Recarregue os dados originais ou desative o modo de edição sem salvar
@@ -109,35 +110,35 @@ export default function PropertiePage() {
                             <div className='box'>
                                 <div>
                                     <label htmlFor="">Title</label>
-                                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
+                                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Location</label>
-                                    <input type="text" value={locations} onChange={(e) => setLocation(e.target.value)}/>
+                                    <input type="text" value={locations} onChange={(e) => setLocation(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Guest</label>
-                                    <input type="text" value={guests} onChange={(e) => setGuests(e.target.value)}/>
+                                    <input type="text" value={guests} onChange={(e) => setGuests(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Bedroom</label>
-                                    <input type="text" value={bedrooms} onChange={(e) => setBedrooms(e.target.value)}/>
+                                    <input type="text" value={bedrooms} onChange={(e) => setBedrooms(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Bed</label>
-                                    <input type="text" value={beds} onChange={(e) => setBeds(e.target.value)}/>
+                                    <input type="text" value={beds} onChange={(e) => setBeds(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Bath</label>
-                                    <input type="text" value={baths} onChange={(e) => setBaths(e.target.value)}/>
+                                    <input type="text" value={baths} onChange={(e) => setBaths(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Price</label>
-                                    <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
+                                    <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
                                 </div>
                                 <div>
                                     <label htmlFor="">Description</label>
-                                    <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
+                                    <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                                 </div>
 
                                 <button onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
