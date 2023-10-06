@@ -42,6 +42,11 @@
     font-style: arial;
 }
 
+.prev-button,
+.next-button:hover{
+    background-color: red;
+}
+
 .dot-indicators {
     display: flex;
     position: absolute;

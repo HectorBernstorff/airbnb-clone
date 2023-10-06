@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../Style/Propertie.css';
 import Image from '../assets/Images/BbackgroundPicture.jpg';
+// import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-export default function Propertie({ title, location, price }) {
+export default function Propertie({ title, location, rating, price }) {
     const containerRef = useRef(null);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
+    // const navigate = useNavigate(); // Initialize the useNavigate hook
 
     useEffect(() => {
         const containerWidth = containerRef.current.offsetWidth;
@@ -43,6 +45,11 @@ export default function Propertie({ title, location, price }) {
         containerRef.current &&
         scrollPosition >= containerRef.current.scrollWidth - containerRef.current.offsetWidth;
 
+    // const handleImageClick = () => {
+    //     // Trigger navigation when the image is clicked
+    //     navigate('/your-navigation-url'); // Replace with your desired navigation URL
+    // };
+
     return (
         <div className='wrapper'>
             <div className="propertie-card-wrapper">
@@ -79,17 +86,13 @@ export default function Propertie({ title, location, price }) {
                 </div>
             </div>
             <div className='propertieInfo'>
-                <div>{title}</div>
+                <div>{location}</div>
                 <div>
-                    <span className='location'>{location.pathname}</span>
                     <div>
-                        <span>*</span>
-                        <span>5.0</span>
+                        <span>{rating}</span>
                     </div>
                 </div>
-                <span>61km away</span>
-                <span>Oct. 23 - 28</span>
-                <span className='price'>{price} CAD night</span>
+                <span className='price'>{price} CAD per night</span>
             </div>
         </div>
     );
