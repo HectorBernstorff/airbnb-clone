@@ -3,39 +3,37 @@ import '../Style/Propertie.css';
 import Image from '../assets/Images/BbackgroundPicture.jpg';
 // import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-export default function Propertie({ title, location, rating, price }) {
+export default function Propertie({ location, rating, price, images, onClickFunction }) {
     const containerRef = useRef(null);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
-    // const navigate = useNavigate(); // Initialize the useNavigate hook
 
-    useEffect(() => {
-        const containerWidth = containerRef.current.offsetWidth;
-        const newPosition = activeIndex * containerWidth;
-        setScrollPosition(newPosition);
-        containerRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
-    }, [activeIndex]);
-
-    useEffect(() => {
-        const containerWidth = containerRef.current.offsetWidth;
-        const newIndex = Math.round(scrollPosition / containerWidth);
-        setActiveIndex(newIndex);
-    }, [scrollPosition]);
 
     const scrollToNext = () => {
         const containerWidth = containerRef.current.offsetWidth;
         const maxScroll = containerRef.current.scrollWidth - containerWidth;
-        const newPosition = Math.min(scrollPosition + containerWidth, maxScroll);
+        let newPosition = Math.min(scrollPosition + containerWidth, maxScroll);
+
+        // Round newPosition to the nearest multiple of containerWidth
+        newPosition = Math.round(newPosition / containerWidth) * containerWidth;
+
         setScrollPosition(newPosition);
         containerRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
     };
 
     const scrollToPrev = () => {
         const containerWidth = containerRef.current.offsetWidth;
-        const newPosition = Math.max(scrollPosition - containerWidth, 0);
+        let newPosition = Math.max(scrollPosition - containerWidth, 0);
+
+        // Round newPosition to the nearest multiple of containerWidth
+        newPosition = Math.round(newPosition / containerWidth) * containerWidth;
+
         setScrollPosition(newPosition);
         containerRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
     };
+
+
+
 
     const numImages = 3;
     const dots = Array.from({ length: numImages }, (_, index) => index);
@@ -45,20 +43,29 @@ export default function Propertie({ title, location, rating, price }) {
         containerRef.current &&
         scrollPosition >= containerRef.current.scrollWidth - containerRef.current.offsetWidth;
 
-    // const handleImageClick = () => {
-    //     // Trigger navigation when the image is clicked
-    //     navigate('/your-navigation-url'); // Replace with your desired navigation URL
-    // };
+
+
+    function handlePropertyClick(propertyData) {
+        // Navigate to the PropertiePage and pass the property data as state
+        navigate(`/PropertiePage/${propertyData.hostName}`, { state: { propertyData } });
+    }
 
     return (
         <div className='wrapper'>
             <div className="propertie-card-wrapper">
+
                 <div className="propertie-card" ref={containerRef}>
-                    <img src={Image} alt="" />
-                    <img src={Image} alt="" />
-                    <img src={Image} alt="" />
+                    {images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={`http://localhost:5000/uploads/${image}`} // Adjust the path accordingly
+                            alt={`Property Image ${index + 1}`}
+                            onClick={onClickFunction}
+                        />
+                    ))}
                 </div>
-                {!isAtStart && (
+
+                {/* {!isAtStart && (
                     <button className="prev-button" onClick={scrollToPrev}>
                         &lt;
                     </button>
@@ -67,7 +74,19 @@ export default function Propertie({ title, location, rating, price }) {
                     <button className="next-button" onClick={scrollToNext}>
                         &gt;
                     </button>
-                )}
+                )} */}
+
+
+                <button className="prev-button" onClick={scrollToPrev}>
+                    &lt;
+                </button>
+
+
+                <button className="next-button" onClick={scrollToNext}>
+                    &gt;
+                </button>
+
+
                 <div className="dot-indicators-wrapper">
                     <div className="dot-indicators">
                         {dots.map((dotIndex) => (

@@ -5,6 +5,9 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import propertiePictures from '../assets/Images/BbackgroundPicture.jpg';
+// import 'react-dates/initialize';
+// import { SingleDatePicker } from "react-dates";
+// import 'react-dates/lib/css/_datepicker.css';
 
 
 export default function PropertiePage() {
@@ -20,6 +23,21 @@ export default function PropertiePage() {
     const [baths, setBaths] = useState(propertyData.hostProperties[0].baths);
     const [price, setPrice] = useState(propertyData.hostProperties[0].price);
     const [description, setDescription] = useState(propertyData.hostProperties[0].description);
+    const bookedDates = propertyData.hostProperties[0].bookedDates.flat();
+    const disabledDates = bookedDates.map(dateStr => new Date(dateStr));
+    const [selectedDate, setSelectedDate] = useState('');
+    const [imageFileNames, setImageFileNames] = useState(propertyData.hostProperties[0].pictures);
+
+
+    const isDateDisabled = (date) => {
+        const selectedDate = new Date(date);
+        return disabledDates.some(disabledDate => (
+            selectedDate.getFullYear() === disabledDate.getFullYear() &&
+            selectedDate.getMonth() === disabledDate.getMonth() &&
+            selectedDate.getDate() === disabledDate.getDate()
+        ));
+    };
+
 
 
 
@@ -82,6 +100,8 @@ export default function PropertiePage() {
         } catch (error) {
             console.error('Error updating property data:', error);
         }
+
+        handleSubmit();
     };
 
 
@@ -95,6 +115,30 @@ export default function PropertiePage() {
         // Recarregue os dados originais ou desative o modo de edição sem salvar
         fetchData();
         setIsEditMode(false);
+    };
+
+
+    const [file, setFile] = useState(null);
+
+    const handleFileChange = (e) => {
+        setFile(e.target.files[0]);
+    };
+
+    const handleSubmit = async () => {
+        const formData = new FormData();
+        formData.append('uploadedFile', file);
+
+        try {
+            await axios.post(`http://localhost:5000/upload/${hostname}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+
+            alert('File uploaded successfully!');
+        } catch (error) {
+            console.error('Error uploading file:', error);
+        }
     };
 
     return (
@@ -137,7 +181,11 @@ export default function PropertiePage() {
                                     <label htmlFor="">Description</label>
                                     <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                                 </div>
-                                <button onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
+                                <div>
+                                    <input type="file" onChange={handleFileChange} />
+                                    {/* <button onClick={handleSubmit}>Upload</button> */}
+                                </div>
+                                <button  onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
                                 <button onClick={handleCancel}>Cancelar</button>
                             </div>
                         </div>
@@ -171,19 +219,34 @@ export default function PropertiePage() {
                         </div>
                     </div>
                     <div className='propertie-image-grid-wrapper'>
-                        <div className='propertie-image-grid'>
+                        {/* <div className='propertie-image-grid'>
                             <img className='propertie-image-grid-col-2 propertie-image-grid-row-2' src={propertiePictures} alt='' />
                             <img src={propertiePictures} alt='' />
                             <img src={propertiePictures} alt='' />
                             <img src={propertiePictures} alt='' />
                             <img src={propertiePictures} alt='' />
+                        </div> */}
+
+                        <div className='propertie-image-grid'>
+                            {imageFileNames.map((imageName, index) => (
+                                <img
+                                    key={index}
+                                    src={`http://localhost:5000/uploads/${imageName}`}
+                                    alt={`Property Image ${index + 1}`}
+                                />
+                            ))}
                         </div>
+
+
+
+
+
                     </div>
                 </div>
                 <div className='infosWrapper'>
                     <div className='description'>
                         <div className='infoBelow'>
-                            <h3>Entire cottage hosted by {propertyData.hostProperties[0].hostName}</h3>
+                            <h3>Entire cottage hosted by {hostname}</h3>
                             <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
                             <span>·</span>
                             <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
@@ -202,14 +265,15 @@ export default function PropertiePage() {
                     </div>
                     <div className='priceDetails'>
                         <div className='priceTitle'>
-                            <div><span className='priceNight'>$228 CAD </span><span>night</span></div>
-                            <span className='rating'>4.92</span>
+                            <div><span className='priceNight'>${propertyData.hostProperties[0].price} CAD </span><span>night</span></div>
+                            <span className='rating'>{propertyData.hostProperties[0].rating}</span>
                         </div>
                         <div className='dateDetails'>
                             <div>
                                 <div id='borderLeft' className='lineBreak'>
                                     <span>Checkin</span>
                                     <span>10-23-2023</span>
+
                                 </div>
                                 <div id='borderRight' className='lineBreak'>
                                     <span>Checkout</span>
@@ -222,7 +286,7 @@ export default function PropertiePage() {
                             </div>
 
                         </div>
-                        
+
                         <div className='reserveSection'>
                             <button>RESERVE</button>
                             <span>You won't be charged yet</span>
@@ -235,18 +299,6 @@ export default function PropertiePage() {
                     </div>
                 </div>
             </div >
-
-            {/* <div>
-                <h2 className='title'>{propertyData.hostProperties[0].title}</h2>
-                <span className='location'>{propertyData.hostProperties[0].location}</span>
-                <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
-                <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
-                <span className='bed'>{propertyData.hostProperties[0].beds} beds</span>
-                <span className='bath'>{propertyData.hostProperties[0].baths} baths</span>
-                <span className='description'>{propertyData.hostProperties[0].description}</span>
-                <span>${propertyData.hostProperties[0].price} CAD night</span>
-            </div> */}
-
         </>
     )
 }

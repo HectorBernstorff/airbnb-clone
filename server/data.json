@@ -4,21 +4,21 @@
       "hostName": "Ella White",
       "hostProperties": [
         {
-          "title": "oweirhgwerng",
-          "location": "aqui",
+          "title": "Home",
+          "location": "Montreal, Quebec - Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
           "baths": 2,
-          "price": 250,
+          "price": "55",
           "description": "Escape to a cozy lakeside cottage and enjoy peaceful mornings by the water. Perfect for nature lovers.",
           "bookedDates": [
             [
-              "2023-05-15",
-              "2023-05-25",
-              "2023-06-05",
-              "2023-06-15",
-              "2023-07-05"
+              "2023-08-09",
+              "2023-08-10",
+              "2023-08-11",
+              "2023-08-12",
+              "2023-08-13"
             ],
             [
               "2023-08-05",
@@ -36,7 +36,14 @@
               "2023-12-15"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "81PUJjhTkkL._CR175,120,408,408_._FMjpg_.jpg",
+            "WhatsApp Image 2023-10-02 at 18.13.26_cb32eacc.jpg",
+            "_corrida e mercado_.png",
+            "WhatsApp Image 2023-10-02 at 18.13.26_cb32eacc.jpg",
+            "WhatsApp Image 2023-10-02 at 17.58.26_ba8ab3e8.jpg"
+          ]
         }
       ]
     },
@@ -72,7 +79,10 @@
               "2023-08-20"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "tentando ser saudaÌvel!.png"
+          ]
         }
       ]
     },
@@ -86,7 +96,7 @@
           "bedrooms": 2,
           "beds": 2,
           "baths": 2,
-          "price": 280,
+          "price": "500",
           "description": "Experience the charm of a rustic mountain cabin nestled in the heart of Banff National Park.",
           "bookedDates": [
             [
@@ -108,7 +118,11 @@
               "2023-12-05"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg",
+            "WhatsApp Image 2023-10-02 at 17.58.26_ba8ab3e8.jpg"
+          ]
         }
       ]
     },
@@ -144,7 +158,10 @@
               "2023-11-15"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -181,7 +198,10 @@
               "2023-11-15"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -195,7 +215,7 @@
           "bedrooms": 2,
           "beds": 2,
           "baths": 1,
-          "price": 200,
+          "price": "175",
           "description": "Experience the serenity of the forest in this cozy cabin. Perfect for a peaceful retreat.",
           "bookedDates": [
             [
@@ -217,7 +237,10 @@
               "2023-10-15"
             ]
           ],
-          "rating": 4.6
+          "rating": 4.6,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -249,7 +272,10 @@
               "2023-10-15"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -280,7 +306,10 @@
               "2023-08-20"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -312,7 +341,10 @@
               "2023-11-05"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -344,7 +376,10 @@
               "2023-10-15"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -377,7 +412,10 @@
               "2024-01-05"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -408,7 +446,10 @@
               "2023-11-20"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -440,7 +481,10 @@
               "2023-10-05"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -476,7 +520,10 @@
               "2023-12-15"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -508,7 +555,10 @@
               "2023-10-15"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -540,7 +590,10 @@
               "2023-11-05"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -576,7 +629,10 @@
               "2023-11-15"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -607,7 +663,10 @@
               "2023-11-20"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -643,7 +702,10 @@
               "2023-12-15"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -674,7 +736,10 @@
               "2023-09-20"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -707,7 +772,10 @@
               "2024-01-05"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -743,7 +811,10 @@
               "2023-11-15"
             ]
           ],
-          "rating": 4.8
+          "rating": 4.8,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -775,7 +846,10 @@
               "2023-10-05"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -807,7 +881,10 @@
               "2023-11-05"
             ]
           ],
-          "rating": 4.7
+          "rating": 4.7,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     },
@@ -839,7 +916,10 @@
               "2023-10-15"
             ]
           ],
-          "rating": 4.9
+          "rating": 4.9,
+          "pictures": [
+            "BbackgroundPicture.jpg"
+          ]
         }
       ]
     }

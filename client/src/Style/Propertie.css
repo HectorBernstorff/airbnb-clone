@@ -3,12 +3,12 @@
     margin: auto;
     display: flex;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 10px; width: 100%; /* Set an explicit width */
 }
 
 .propertie-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Add a width for the container */
+    height: 100%; /* Add a height for the container */
     object-fit: cover;
     aspect-ratio: 19 / 18;
 }
@@ -23,6 +23,8 @@
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
+
+    z-index: 9999;
 }
 
 .prev-button {
@@ -42,7 +44,7 @@
     font-style: arial;
 }
 
-.prev-button,
+.prev-button:hover,
 .next-button:hover{
     background-color: red;
 }

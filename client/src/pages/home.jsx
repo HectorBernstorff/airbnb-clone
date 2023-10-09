@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import logo from '../assets/Images/logo.png'
 
 
+
 function Home() {
   const [properties, setProperties] = useState([]);
   const [filters, setFilters] = useState({
@@ -96,44 +97,61 @@ function Home() {
     setFilteredProperties(filtered);
   }
 
+
+
+
   return (
     <>
+
       <header>
         <div className='headerTop'>
           <div className='innerHeaderTop'>
             <span className='spanImg'><img src={logo} alt="" /></span>
             <div className='searchWrapper'>
-              <div>
-                <input
-                  type="text"
-                  name="location"
-                  placeholder="Location"
-                  value={filters.location}
-                  onChange={handleFilterChange}
-                />
+              <div className='search'>
+                <div>
+                  <label htmlFor="">Where</label>
+                  <input
+                    type="text"
+                    name="location"
+                    placeholder="Location"
+                    value={filters.location}
+                    onChange={handleFilterChange}
+                  />
+                </div>
                 <hr />
-                <input
-                  type="date"
-                  name="startDate"
-                  placeholder="Start Date"
-                  value={filters.startDate}
-                  onChange={handleFilterChange}
-                />
-                <input
-                  type="date"
-                  name="endDate"
-                  placeholder="End Date"
-                  value={filters.endDate}
-                  onChange={handleFilterChange}
-                />
+                <div>
+                  <label htmlFor="">Check in</label>
+                  <input
+                    type="date"
+                    name="startDate"
+                    placeholder="Start Date"
+                    value={filters.startDate}
+                    onChange={handleFilterChange}
+                  />
+                </div>
                 <hr />
-                <input
-                  type="text"
-                  name="guests"
-                  placeholder="Guests"
-                  value={filters.guests}
-                  onChange={handleFilterChange}
-                />
+                <div>
+                  <label htmlFor="">Check out</label>
+                  <input
+                    type="date"
+                    name="endDate"
+                    placeholder="End Date"
+                    value={filters.endDate}
+                    onChange={handleFilterChange}
+                  />
+                </div>
+                <hr />
+                <div>
+                  <label htmlFor="">Who</label>
+                  <input
+                    type="text"
+                    name="guests"
+                    placeholder="Guests"
+                    value={filters.guests}
+                    onChange={handleFilterChange}
+                  />
+                </div>
               </div>
 
               <button onClick={handleApplyFilter}>
@@ -269,11 +287,28 @@ function Home() {
           />
           <button onClick={handleApplyFilter}>Apply Filter</button>
         </div> */}
-        {filteredProperties.map((property, index) => (
+
+        {/* {filteredProperties.map((property, index) => (
           <a key={index} onClick={() => handlePropertyClick(property)}>
-            <Propertie title={property.hostProperties[0].title} location={property.hostProperties[0].location} price={property.hostProperties[0].price} />
+            <Propertie title={property.hostProperties[0].title} location={property.hostProperties[0].location} price={property.hostProperties[0].price} images={property.hostProperties[0].pictures[0]}/>
           </a>
+        ))} */}
+
+
+        {filteredProperties.map((property, index) => (
+
+
+          <Propertie
+            title={property.hostProperties[0].title}
+            location={property.hostProperties[0].location}
+            price={property.hostProperties[0].price}
+            images={property.hostProperties[0].pictures}
+            onClickFunction={() => handlePropertyClick(property)}
+          />
+
+
         ))}
+
       </main>
       <footer></footer>
     </>
