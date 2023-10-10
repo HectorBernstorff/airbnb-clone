@@ -121,6 +121,43 @@ app.get('/properties', async (req, res) => {
   });
   
   app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+  app.delete('/deleteImage/:hostname/:imageName', async (req, res) => {
+    const hostname = req.params.hostname;
+    const imageName = req.params.imageName;
+  
+    try {
+      // Read the current data from the data.json file
+      const dataPath = path.join(__dirname, 'data.json');
+      const jsonData = await fs.readFile(dataPath, 'utf-8');
+      const parsedData = JSON.parse(jsonData);
+  
+      // Find the host by hostname (assuming hostname is unique)
+      const host = parsedData.hosts.find((host) => host.hostName === hostname);
+  
+      if (!host) {
+        return res.status(404).json({ error: 'Host not found' });
+      }
+  
+      // Remove the image name from the "pictures" array
+      host.hostProperties[0].pictures = host.hostProperties[0].pictures.filter(
+        (picture) => picture !== imageName
+      );
+  
+      // Write the updated data back to the data.json file
+      await fs.writeFile(dataPath, JSON.stringify(parsedData, null, 2), 'utf-8');
+  
+      // Remove the image file from the "uploads" folder
+      const imagePath = path.join(__dirname, 'uploads', imageName);
+      await fs.unlink(imagePath);
+  
+      res.status(200).json({ message: 'Image deleted successfully.' });
+    } catch (error) {
+      console.error('Error deleting image:', error);
+      res.status(500).json({ error: 'Error deleting image.' });
+    }
+  });
+  
   
 
 

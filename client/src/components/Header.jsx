@@ -52,7 +52,7 @@ export default function Header(props) {
                     </div>
                 </div>
 
-                <hr />
+
 
                 {/* <div className='navBar'>
                     <div className='innerNavBar'>

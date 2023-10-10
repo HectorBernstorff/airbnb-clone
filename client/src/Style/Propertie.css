@@ -82,17 +82,62 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    padding-bottom: 1rem;
 }
 
 .propertieInfo {
     display: flex;
     flex-direction: column;
-
     padding-top: 12px;
+    gap: 0.75rem;
 }
 
-.propertieInfo div {
+.propertieInfo div div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
+}
+
+.propertieInfo div div:first-child {
+    font-weight: bold;
+}
+
+.propertieInfo svg {
+    width: 18px;
+    margin-bottom: 2px;
+}
+.propertieInfo span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.infoTitle {
+    color: #717171;
+}
+
+.propertieInfo div:last-child {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.propertieInfo div:last-child :first-child{
+    font-weight: bold;
+}
+
+.innerInfo {
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ratingInfo {
+    font-weight: 100;
 }
