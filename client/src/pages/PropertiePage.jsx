@@ -9,6 +9,8 @@ import propertiePictures from '../assets/Images/BbackgroundPicture.jpg';
 // import { SingleDatePicker } from "react-dates";
 // import 'react-dates/lib/css/_datepicker.css';
 import ConfirmationModal from '../components/confirmation';
+import AllPictures from '../components/AllPictures';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -25,23 +27,24 @@ export default function PropertiePage() {
     const [baths, setBaths] = useState(propertyData.hostProperties[0].baths);
     const [price, setPrice] = useState(propertyData.hostProperties[0].price);
     const [description, setDescription] = useState(propertyData.hostProperties[0].description);
-    const bookedDates = propertyData.hostProperties[0].bookedDates.flat();
-    const disabledDates = bookedDates.map(dateStr => new Date(dateStr));
-    const [selectedDate, setSelectedDate] = useState('');
     const [imageFileNames, setImageFileNames] = useState(propertyData.hostProperties[0].pictures);
-    const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
-    const [imageToDelete, setImageToDelete] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (isOpen) {
+            // Add the 'hide-scrollbar' class to the body element
+            document.body.classList.add('hideScroll');
+            window.scrollTo(0, 0);
+        } else {
+            // Remove the 'hide-scrollbar' class from the body element
+            document.body.classList.remove('hideScroll');
+        }
+    }, [isOpen]);
 
 
 
-    const isDateDisabled = (date) => {
-        const selectedDate = new Date(date);
-        return disabledDates.some(disabledDate => (
-            selectedDate.getFullYear() === disabledDate.getFullYear() &&
-            selectedDate.getMonth() === disabledDate.getMonth() &&
-            selectedDate.getDate() === disabledDate.getDate()
-        ));
-    };
 
 
 
@@ -162,72 +165,148 @@ export default function PropertiePage() {
     };
 
 
+    function handlePictureClick(propertyData) {
+        // Navigate to the PropertiePage and pass the property data as state
+        navigate(`/PropertiePage/${propertyData.hostName}/pictures`, { state: { propertyData } });
+        window.scrollTo(0, 0);
+    }
+
+    const isDateDisabled = (date) => {
+        if (propertyData) {
+            // Check if the given date falls in any booked date range
+            for (const bookedDates of propertyData.hostProperties[0].bookedDates) {
+                const startDate = new Date(bookedDates[0]);
+                const endDate = new Date(bookedDates[bookedDates.length - 1]);
+                if (date >= startDate && date <= endDate) {
+                    return true; // Date is booked
+                }
+            }
+        }
+        return false; // Date is available
+    };
+
+    const getAvailableDates = () => {
+        const checkInDate = new Date();
+        let consecutiveAvailableDates = [];
+        let found = false;
+
+        while (!found) {
+            // Check if the current date is available
+            if (!isDateDisabled(checkInDate)) {
+                consecutiveAvailableDates.push(new Date(checkInDate));
+                if (consecutiveAvailableDates.length === 5) {
+                    found = true;
+                }
+            } else {
+                consecutiveAvailableDates = [];
+            }
+
+            checkInDate.setDate(checkInDate.getDate() + 1);
+        }
+
+        return consecutiveAvailableDates;
+    };
+
+    const availableDates = getAvailableDates();
+
+    const checkInDate = availableDates[0];
+    const checkOutDate = availableDates[4];
+
+    const calculateTotalPrice = () => {
+        return price * 5;
+    };
+
 
     return (
         <>
 
             <div className='propertyPageWrapper'>
-            <Header />
+                <Header />
+
                 <div>
                     {isEditMode ? (
                         <>
                             <div className='editWrapper'>
                                 <div className='box'>
                                     <div id='edit-image-grid'>
+
+                                        <label className='addPictureButton' for="file-upload">
+                                            <svg width="3rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+
+                                            <input id="file-upload" type="file" onChange={handleFileChange} ></input>
+                                        </label>
+                                        {/* <button onClick={handleSubmit}>Upload</button> */}
+
+
                                         {imageFileNames.map((imageName, index) => (
-                                            <img
-                                                onClick={() => handleDeleteImage(imageName)}
-                                                key={index}
-                                                src={`http://localhost:5000/uploads/${imageName}`}
-                                                alt={`Property Image ${index + 1}`
-                                                }
-                                            />
+                                            <div className='imageWrapper'>
+
+                                                <svg
+                                                    onClick={() => handleDeleteImage(imageName)}
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                                <img
+                                                    key={index}
+                                                    src={`http://localhost:5000/uploads/${imageName}`}
+                                                    alt={`Property Image ${index + 1}`
+                                                    }
+                                                />
+                                            </div>
                                         ))}
                                     </div>
-                                    <div>
-                                        <label htmlFor="">Title</label>
-                                        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                                    <div className='inputAreaWrapper'>
+                                        <div id='inputNumbers'>
+                                            <div className='inputArea'>
+                                                <label htmlFor="">Title</label>
+                                                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                                            </div>
+                                            <div className='inputArea'>
+                                                <label htmlFor="">Location</label>
+                                                <input type="text" value={locations} onChange={(e) => setLocation(e.target.value)} />
+                                            </div>
+                                        </div>
+                                        <div id='inputNumbers'>
+                                            <div className='inputArea'>
+                                                <label htmlFor="">Guest</label>
+                                                <input type="text" value={guests} onChange={(e) => setGuests(e.target.value)} />
+                                            </div>
+                                            <div className='inputArea'>
+                                                <label htmlFor="">Bedroom</label>
+                                                <input type="text" value={bedrooms} onChange={(e) => setBedrooms(e.target.value)} />
+                                            </div>
+                                        </div>
+                                        <div id='inputNumbers'>
+                                            <div className='inputArea'>
+                                                <label htmlFor="">Bed</label>
+                                                <input type="text" value={beds} onChange={(e) => setBeds(e.target.value)} />
+                                            </div>
+                                            <div className='inputArea'>
+                                                <label htmlFor="">Bath</label>
+                                                <input type="text" value={baths} onChange={(e) => setBaths(e.target.value)} />
+                                            </div>
+                                        </div>
+                                        <div className='inputArea'>
+                                            <label htmlFor="">Price</label>
+                                            <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
+                                        </div>
+                                        <div className='inputArea'>
+                                            <label htmlFor="">Description</label>
+                                            <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+                                        </div>
+                                        <div id='inputNumbers'>
+                                            <button onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
+                                            <button onClick={handleCancel}> Calcel</button>
+                                        </div>
+                                        <button className='close' onClick={handleCancel}>X</button>
                                     </div>
-                                    <div>
-                                        <label htmlFor="">Location</label>
-                                        <input type="text" value={locations} onChange={(e) => setLocation(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Guest</label>
-                                        <input type="text" value={guests} onChange={(e) => setGuests(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Bedroom</label>
-                                        <input type="text" value={bedrooms} onChange={(e) => setBedrooms(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Bed</label>
-                                        <input type="text" value={beds} onChange={(e) => setBeds(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Bath</label>
-                                        <input type="text" value={baths} onChange={(e) => setBaths(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Price</label>
-                                        <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Description</label>
-                                        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
-                                    </div>
-                                    <div>
-                                        <input type="file" onChange={handleFileChange} />
-                                        {/* <button onClick={handleSubmit}>Upload</button> */}
-                                    </div>
-                                    <button onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
-                                    <button className='close' onClick={handleCancel}>X</button>
                                 </div>
                             </div>
                         </>
                     ) : (
-                        // <button onClick={handleEdit}>Editar</button>
-                        <span></span>
+                        <></>
                     )}
                 </div>
                 <div className='propertyWrapper'>
@@ -270,22 +349,19 @@ export default function PropertiePage() {
                             </div>
                         </div>
                         <div className='propertie-image-grid-wrapper'>
-                            {/* <div className='propertie-image-grid'>
-                                <img className='propertie-image-grid-col-2 propertie-image-grid-row-2' src={propertiePictures} alt='' />
-                                <img src={propertiePictures} alt='' />
-                                <img src={propertiePictures} alt='' />
-                                <img src={propertiePictures} alt='' />
-                                <img src={propertiePictures} alt='' />
-                            </div> */}
+
                             <div className='propertie-image-grid'>
-                                {imageFileNames.map((imageName, index) => (
+                                {imageFileNames.slice(0, 5).map((imageName, index) => (
                                     <img
+                                        // onClick={() => setIsOpen(true)}
+                                        onClick={() => handlePictureClick(propertyData)}
                                         key={index}
                                         src={`http://localhost:5000/uploads/${imageName}`}
-                                        alt={`Property Image ${index + 1}`}
                                     />
                                 ))}
                             </div>
+
+
                         </div>
                     </div>
                     <div className='infosWrapper'>
@@ -308,44 +384,44 @@ export default function PropertiePage() {
                                 </span>
                             </div>
                         </div>
-                        
-                            <div className='priceDetails'>
-                                <div className='priceTitle'>
-                                    <div><span className='priceNight'>${propertyData.hostProperties[0].price} CAD </span><span>night</span></div>
-                                    <div className='ratingSection'>
-                                        <svg width="1rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                                        </svg>
-                                        <span className='rating'>{propertyData.hostProperties[0].rating}</span>
-                                    </div>
-                                </div>
-                                <div className='dateDetails'>
-                                    <div>
-                                        <div id='borderLeft' className='lineBreak'>
-                                            <span>Checkin</span>
-                                            <span>10-23-2023</span>
-                                        </div>
-                                        <div id='borderRight' className='lineBreak'>
-                                            <span>Checkout</span>
-                                            <span>10-28-2023</span>
-                                        </div>
-                                    </div>
-                                    <div id='borderBottom' className='lineBreak'>
-                                        <span>Guests</span>
-                                        <span>1 guest</span>
-                                    </div>
-                                </div>
-                                <div className='reserveSection'>
-                                    <button>Reserve</button>
-                                    <span>You won't be charged yet</span>
-                                </div>
-                                <hr />
-                                <div className='priceTotal'>
-                                    <span>Total</span>
-                                    <span>$1,964 CAD</span>
+
+                        <div className='priceDetails'>
+                            <div className='priceTitle'>
+                                <div><span className='priceNight'>${propertyData.hostProperties[0].price} CAD </span><span>night</span></div>
+                                <div className='ratingSection'>
+                                    <svg width="1rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                    </svg>
+                                    <span className='rating'>{propertyData.hostProperties[0].rating}</span>
                                 </div>
                             </div>
-                        
+                            <div className='dateDetails'>
+                                <div>
+                                    <div id='borderLeft' className='lineBreak'>
+                                        <span>Checkin</span>
+                                        <span className='checkIn'>{checkInDate.toDateString()}</span>
+                                    </div>
+                                    <div id='borderRight' className='lineBreak'>
+                                        <span>Checkout</span>
+                                        <span className='checkOut'>{checkOutDate.toDateString()}</span>
+                                    </div>
+                                </div>
+                                <div id='borderBottom' className='lineBreak'>
+                                    <span>Guests</span>
+                                    <span>1 guest</span>
+                                </div>
+                            </div>
+                            <div className='reserveSection'>
+                                <button>Reserve</button>
+                                <span>You won't be charged yet</span>
+                            </div>
+                            <hr />
+                            <div className='priceTotal'>
+                                <span>Total</span>
+                                <span>${calculateTotalPrice()}  CAD</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div >
             </div>

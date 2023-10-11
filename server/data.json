@@ -5,7 +5,7 @@
       "hostProperties": [
         {
           "title": "Home",
-          "location": "Montreal, Quebec, Canada",
+          "location": "Montreal, Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -14,35 +14,24 @@
           "description": "Escape to a cozy lakeside cottage and enjoy peaceful mornings by the water. Perfect for nature lovers.",
           "bookedDates": [
             [
-              "2023-08-09",
-              "2023-08-10",
-              "2023-08-11",
-              "2023-08-12",
-              "2023-08-13"
+              "2023-10-09",
+              "2023-10-10",
+              "2023-10-11",
+              "2023-10-12",
+              "2023-10-13"
             ],
             [
-              "2023-08-05",
-              "2023-08-15",
-              "2023-09-05",
-              "2023-09-15"
-            ],
-            [
-              "2023-10-05",
+              "2023-10-14",
               "2023-10-15",
-              "2023-11-05"
-            ],
-            [
-              "2023-12-05",
-              "2023-12-15"
+              "2023-10-16"
             ]
           ],
           "rating": 4.7,
           "pictures": [
-            "WhatsApp Image 2023-10-02 at 17.54.22_cafb7c9a.jpg",
-            "WhatsApp Image 2023-10-02 at 17.54.21_e452c3aa.jpg",
-            "WhatsApp Image 2023-10-02 at 17.54.22_7a1de155.jpg",
             "WhatsApp Image 2023-10-02 at 17.54.51_6ad965f4.jpg",
-            "WhatsApp Image 2023-10-02 at 17.54.51_94be8319.jpg"
+            "s3422dwg-cfp-00000ff090-bk.jpg",
+            "DL.jpg",
+            "wallpaper.jpg"
           ]
         }
       ]
@@ -52,7 +41,7 @@
       "hostProperties": [
         {
           "title": "Downtown Loft with Skyline Views",
-          "location": "Toronto, Ontario, Canada",
+          "location": "Toronto, Canada",
           "guests": 2,
           "bedrooms": 1,
           "beds": 1,
@@ -81,7 +70,20 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "WhatsApp Image 2023-10-02 at 17.54.51_94be8319.jpg"
+            "WhatsApp Image 2023-10-02 at 17.54.51_6ad965f4.jpg",
+            "s3422dwg-cfp-00000ff090-bk.jpg",
+            "s3422dwg-cfp-00000td090-bk.jpg",
+            "s3422dwg-cfp-00090lp090-bk.jpg",
+            "s3422dwg-cfp-00180bf090-bk.jpg",
+            "s3422dwg-cfp-port-bk.jpg",
+            "s3422dwg-xfp-01-bk (1).jpg",
+            "s3422dwg-xfp-02-bk.jpg",
+            "s3422dwg-xfp-03-bk.jpg",
+            "81PUJjhTkkL._CR175,120,408,408_._FMjpg_.jpg",
+            "WhatsApp Image 2023-10-02 at 17.58.26_ba8ab3e8.jpg",
+            "81wL6eKZ7rL._CR0,0,1824,405_._FMjpg_.jpg",
+            "WhatsApp Image 2023-10-02 at 18.13.26_cb32eacc.jpg",
+            "My-Post-2021-07-27T152659.149.webp"
           ]
         }
       ]
@@ -91,7 +93,7 @@
       "hostProperties": [
         {
           "title": "Rustic Mountain Cabin",
-          "location": "Banff, Alberta, Canada",
+          "location": "Banff, Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -120,8 +122,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg",
-            "WhatsApp Image 2023-10-02 at 17.58.26_ba8ab3e8.jpg"
+            "BbackgroundPicture.jpg"
           ]
         }
       ]
@@ -131,7 +132,7 @@
       "hostProperties": [
         {
           "title": "Beachfront Bungalow",
-          "location": "Victoria, British Columbia, Canada",
+          "location": "Victoria, Canada",
           "guests": 6,
           "bedrooms": 3,
           "beds": 3,
@@ -160,7 +161,10 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg"
+            "BbackgroundPicture.jpg",
+            "wallpaper.jpg",
+            "logo.png",
+            "DL.jpg"
           ]
         }
       ]
@@ -170,7 +174,7 @@
       "hostProperties": [
         {
           "title": "Countryside Retreat",
-          "location": "Quebec City, Quebec, Canada",
+          "location": "Quebec City, Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -210,7 +214,7 @@
       "hostProperties": [
         {
           "title": "Cozy Forest Cabin",
-          "location": "Calgary, Alberta, Canada",
+          "location": "Calgary, Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -249,7 +253,7 @@
       "hostProperties": [
         {
           "title": "Charming Vineyard Villa",
-          "location": "Napa Valley, California, USA",
+          "location": "Napa Valley, USA",
           "guests": 8,
           "bedrooms": 4,
           "beds": 4,
@@ -284,7 +288,7 @@
       "hostProperties": [
         {
           "title": "Historic City Apartment",
-          "location": "Boston, Massachusetts, USA",
+          "location": "Boston, USA",
           "guests": 3,
           "bedrooms": 1,
           "beds": 1,
@@ -318,7 +322,7 @@
       "hostProperties": [
         {
           "title": "Mountain View Retreat",
-          "location": "Aspen, Colorado, USA",
+          "location": "Aspen, USA",
           "guests": 6,
           "bedrooms": 3,
           "beds": 3,
@@ -353,7 +357,7 @@
       "hostProperties": [
         {
           "title": "Oceanfront Paradise",
-          "location": "Maui, Hawaii, USA",
+          "location": "Maui, USA",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -388,7 +392,7 @@
       "hostProperties": [
         {
           "title": "Ski-In/Ski-Out Chalet",
-          "location": "Park City, Utah, USA",
+          "location": "Park City, USA",
           "guests": 8,
           "bedrooms": 4,
           "beds": 4,
@@ -424,7 +428,7 @@
       "hostProperties": [
         {
           "title": "Desert Oasis Villa",
-          "location": "Scottsdale, Arizona, USA",
+          "location": "Scottsdale, USA",
           "guests": 6,
           "bedrooms": 3,
           "beds": 3,
@@ -458,7 +462,7 @@
       "hostProperties": [
         {
           "title": "Historic Waterfront Mansion",
-          "location": "Charleston, South Carolina, USA",
+          "location": "Charleston, USA",
           "guests": 10,
           "bedrooms": 5,
           "beds": 5,
@@ -493,7 +497,7 @@
       "hostProperties": [
         {
           "title": "Riverside Retreat",
-          "location": "Breckenridge, Colorado, USA",
+          "location": "Breckenridge, USA",
           "guests": 6,
           "bedrooms": 3,
           "beds": 3,
@@ -532,7 +536,7 @@
       "hostProperties": [
         {
           "title": "Sunny Beach House",
-          "location": "Santa Monica, California, USA",
+          "location": "Santa Monica, USA",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -567,7 +571,7 @@
       "hostProperties": [
         {
           "title": "Mountain Cabin Hideaway",
-          "location": "Lake Tahoe, California, USA",
+          "location": "Lake Tahoe, USA",
           "guests": 5,
           "bedrooms": 2,
           "beds": 2,
@@ -602,7 +606,7 @@
       "hostProperties": [
         {
           "title": "Tropical Paradise Villa",
-          "location": "Maui, Hawaii, USA",
+          "location": "Maui, USA",
           "guests": 6,
           "bedrooms": 3,
           "beds": 3,
@@ -641,7 +645,7 @@
       "hostProperties": [
         {
           "title": "Countryside Manor",
-          "location": "Cotswolds, England, UK",
+          "location": "Cotswolds, UK",
           "guests": 8,
           "bedrooms": 4,
           "beds": 4,
@@ -784,7 +788,7 @@
       "hostProperties": [
         {
           "title": "Vineyard Retreat",
-          "location": "Napa Valley, California, USA",
+          "location": "Napa Valley, USA",
           "guests": 6,
           "bedrooms": 3,
           "beds": 3,
@@ -823,7 +827,7 @@
       "hostProperties": [
         {
           "title": "Historic Scottish Castle",
-          "location": "Edinburgh, Scotland, UK",
+          "location": "Edinburgh, UK",
           "guests": 12,
           "bedrooms": 6,
           "beds": 6,
@@ -858,7 +862,7 @@
       "hostProperties": [
         {
           "title": "Lakeside Log Cabin",
-          "location": "Lake Tahoe, California, USA",
+          "location": "Lake Tahoe, USA",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
@@ -882,41 +886,6 @@
             ]
           ],
           "rating": 4.7,
-          "pictures": [
-            "BbackgroundPicture.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "hostName": "Zoe Clark",
-      "hostProperties": [
-        {
-          "title": "Tropical Island Getaway",
-          "location": "Bora Bora, French Polynesia",
-          "guests": 2,
-          "bedrooms": 1,
-          "beds": 1,
-          "baths": 1,
-          "price": 1200,
-          "description": "Escape to a luxurious overwater bungalow in the paradise of Bora Bora.",
-          "bookedDates": [
-            [
-              "2023-06-25",
-              "2023-07-05",
-              "2023-07-15"
-            ],
-            [
-              "2023-08-05",
-              "2023-08-15",
-              "2023-09-05"
-            ],
-            [
-              "2023-10-05",
-              "2023-10-15"
-            ]
-          ],
-          "rating": 4.9,
           "pictures": [
             "BbackgroundPicture.jpg"
           ]

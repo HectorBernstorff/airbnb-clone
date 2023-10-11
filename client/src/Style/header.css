@@ -77,10 +77,7 @@ header {
   font-size: 14px;
   font-weight: bold;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
 
 
 
@@ -92,14 +89,10 @@ header {
 
 .searchWrapper div {
   display: flex;
-  justify-content: center;
-  align-self: center;
-
-  column-gap: 1.5rem;
 }
 
 .searchWrapper span {
-  padding: 0.25rem 0;
+
 }
 
 .searchWrapper button {
@@ -141,12 +134,6 @@ header {
 
 #profileSVG {
   width: 2rem;
-}
-
-.search div {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.25rem;
 }
 
 input {

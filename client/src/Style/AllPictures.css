@@ -1,0 +1,61 @@
+.allPicturesGrid {
+    height: 100%;
+    width: 100%;
+
+
+    overflow-y: scroll;
+
+
+}
+
+.innerAllPicturesGrid img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+}
+
+.allPicturesGrid img:first-child {
+    padding-top: 5rem;
+}
+
+.allPicturesGrid img:last-child {
+    padding-bottom: 5rem;
+}
+
+.innerAllPicturesGrid {
+    max-width: 800px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 5rem;
+
+    gap: 0.5rem;
+}
+
+.allPicturesGrid button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    border-radius: 25px;
+    padding: 0.25rem;
+    margin: 0;
+    height: 2rem;
+    width: 2rem;
+
+    transition: 0.2s;
+}
+
+.allPicturesGrid button:hover {
+    background-color: #EEEEEE;
+}

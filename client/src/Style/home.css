@@ -1,93 +1,106 @@
+main {
+  --collumns: 6;
+
+  display: grid;
+  grid-template-columns: repeat(var(--collumns), 1fr);
+
+  gap: 1.5rem;
+
+  /* padding: 2.5rem; */
+}
+
+.homeWrapper {
+  padding: 0 5rem;
+  min-width: 744px;
+
+}
+
+@media screen and (max-width: 1880px) {
+  main {
+    --collumns: 5;
+  }
+}
+
+@media screen and (max-width: 1640px) {
+  main {
+    --collumns: 4;
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  main {
+    --collumns: 3;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  /* .homeWrapper {
+    padding: 50rem;
+  } */
+  main {
+    --collumns: 2;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    --collumns: 1;
+  }
+}
 
 
-main{
-    --collumns: 6;
-  
-    display: grid;
-    grid-template-columns: repeat(var(--collumns), 1fr);
-  
-    gap: 1.5rem;
-  
-    /* padding: 2.5rem; */
+@media screen and (max-width: 1440px) {
+  .homeWrapper {
+    padding: 0 2.5rem;
   }
-  
-  @media screen and (max-width: 1080px) {
-  
+
+  #regularLogo {
+    display: none;
   }
-  
-  @media screen and (max-width: 1880px) {
-    main {
-      --collumns: 5;
-    }
+
+  #smallerLogo {
+    display: block;
   }
-  
-  @media screen and (max-width: 1640px) {
-    main {
-      --collumns: 4;
-    }
-  }
-  
-  @media screen and (max-width: 1128px) {
-    main {
-      --collumns: 3;
-    }
-  }
-  
-  @media screen and (max-width: 950px) {
-    main {
-      --collumns: 2;
-    }
-  }
-  
-  @media screen and (max-width: 550px) {
-    main {
-      --collumns: 1;
-    }
-  }
-  
-  
-  @media  screen and (max-width: 1440px) {
-    .homeWrapper {
-      padding: 0 2.5rem;
-    }
-  
-    #regularLogo {
-      display: none;
-    }
-    #smallerLogo {
-      display: block;
-    }
-  
-  
-  }
-  
-  @media  screen and (max-width: 744px) {
+
+
+}
+
+@media  screen and (max-width: 950px) {
     .homeWrapper {
       padding: 0 1.5rem;
     }
   }
-  
-  #smallerLogo {
-    display: none;
-  }
-  
-  #regularLogo {
-    display: block;
-  }
-  
-  
-  
-  main{
-    /* margin: auto; */
-    /* padding: 0 5rem; */
+
+#smallerLogo {
+  display: none;
+}
+
+#regularLogo {
+  display: block;
+}
+
+
+
+main {
+  /* margin: auto; */
+  /* padding: 0 5rem; */
   margin: 2rem auto 2rem auto;
+
+  max-width: 2360px;
+}
+
+#search {
+
+}
+
+.fields {
+  max-width: 150px;
+  min-width: min-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
   
-    max-width: 2360px;
-  }
-  
-  .homeWrapper {
-    padding: 0 5rem;
-    min-width: 744px;
-  
-    border: 1px solid red;
-  }
+  flex: 1;
+}
+

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../App.css';
 import Propertie from '../components/Propertie';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import logo from '../assets/Images/logo.png'
 import logoSmall from '../assets/Images/logoSmall.png'
 import '../Style/home.css';
-// import Map from '../components/Map';
 
 
 
@@ -29,6 +27,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // document.body.classList.remove('hideScroll');
     // Make an HTTP GET request to fetch property data
     axios.get('http://localhost:5000/properties') // Replace with the correct endpoint
       .then((response) => {
@@ -44,6 +43,7 @@ function Home() {
   function handlePropertyClick(propertyData) {
     // Navigate to the PropertiePage and pass the property data as state
     navigate(`/PropertiePage/${propertyData.hostName}`, { state: { propertyData } });
+    window.scrollTo(0, 0);
   }
 
   function handleFilterChange(event) {
@@ -134,8 +134,8 @@ function Home() {
               <span id='regularLogo' className='spanImg'><img src={logo} alt="" /></span>
               <span id='smallerLogo' className='spanImg'><img src={logoSmall} alt="" /></span>
               <div className='searchWrapper'>
-                <div className='search'>
-                  <div>
+                <div id='search'>
+                  <div className='fields'>
                     <label htmlFor="">Where</label>
                     <input
                       type="text"
@@ -146,7 +146,7 @@ function Home() {
                     />
                   </div>
                   <hr />
-                  <div>
+                  <div className='fields'>
                     <label htmlFor="">Check in</label>
                     <input
                       type="date"
@@ -157,7 +157,7 @@ function Home() {
                     />
                   </div>
                   <hr />
-                  <div>
+                  <div className='fields'>
                     <label htmlFor="">Check out</label>
                     <input
                       type="date"
@@ -168,7 +168,7 @@ function Home() {
                     />
                   </div>
                   <hr />
-                  <div>
+                  <div className='fields'>
                     <label htmlFor="">Who</label>
                     <input
                       type="text"
@@ -203,14 +203,16 @@ function Home() {
           </div>
           <hr />
         </header>
+
         <main>
+
           {filteredProperties.map((property, index) => (
             <Propertie
               title={property.hostProperties[0].title}
               location={property.hostProperties[0].location}
-              rating={property.hostProperties[0].rating}
               price={property.hostProperties[0].price}
               images={property.hostProperties[0].pictures}
+              rating={property.hostProperties[0].rating}
               onClickFunction={() => handlePropertyClick(property)}
             />
           ))}

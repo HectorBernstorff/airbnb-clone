@@ -15,21 +15,21 @@
 
 .propertie-card-wrapper {
     position: relative;
+
+    transition: .2s;
 }
 
 .next-button {
     position: absolute;
-    right: 0;
+    right: 0.5rem;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
-
-    z-index: 9999;
 }
 
 .prev-button {
     position: absolute;
-    left: 0;
+    left: 0.5rem;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -38,15 +38,27 @@
 .prev-button,
 .next-button {
     border: none;
-    background: none;
-    color: white;
-    font-size: large;
-    font-style: arial;
+    background-color: rgba(255, 255, 255, 0.700);
+    color: black;
+    border-radius: 25px;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+    margin: auto;
+    cursor: pointer;
+    display: none;
+
+    transition: .2s;
 }
 
 .prev-button:hover,
 .next-button:hover{
-    background-color: red;
+    background-color: white;
+}
+
+.propertie-card-wrapper:hover .prev-button,
+.propertie-card-wrapper:hover .next-button {
+    display: block; /* Show the buttons on hover */
 }
 
 .dot-indicators {
