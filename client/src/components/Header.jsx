@@ -1,12 +1,19 @@
 import React from 'react';
 import logo from '../assets/Images/logo.png'
 import '../Style/header.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Header(props) {
 
     const handleApplyFilter = () => {
         props.onButtonClick();
     };
+
+    const navigate = useNavigate();
+    
+    function logoClick() {
+        navigate(`/`);
+      }
     
     return (
         <>
@@ -15,7 +22,7 @@ export default function Header(props) {
             <header>
                 <div className='headerTop'>
                     <div className='innerHeaderTop'>
-                        <span className='spanImg'><img src={logo} alt="" /></span>
+                        <span onClick={logoClick} className='spanImg'><img src={logo} alt="" /></span>
                         {/* <div className='searchWrapper'>
                             <div>
                                 <span><input type="text" name="" id="" placeholder='Anywhere' /></span>
@@ -82,7 +89,7 @@ export default function Header(props) {
                     </div>
 
                 </div> */}
-
+            <hr />
             </header>
         </>
     );

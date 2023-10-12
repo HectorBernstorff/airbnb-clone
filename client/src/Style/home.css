@@ -34,6 +34,7 @@ main {
 }
 
 @media screen and (max-width: 950px) {
+
   /* .homeWrapper {
     padding: 50rem;
   } */
@@ -55,32 +56,39 @@ main {
     padding: 0 2.5rem;
   }
 
-  #regularLogo {
-    display: none;
+  .hideElement {
+    display: none !important;
   }
-
-  #smallerLogo {
-    display: block;
-  }
-
 
 }
-
-@media  screen and (max-width: 950px) {
-    .homeWrapper {
-      padding: 0 1.5rem;
-    }
+@media screen and (max-width: 1020px) {
+  .smallerLogo {
+    display: block !important;
   }
 
-#smallerLogo {
+  .regularLogo {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .homeWrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+.spanImg img {
+  height: 2rem;
+}
+
+.smallerLogo {
   display: none;
 }
 
-#regularLogo {
+.regularLogo {
+
   display: block;
 }
-
-
 
 main {
   /* margin: auto; */
@@ -91,16 +99,87 @@ main {
 }
 
 #search {
+  display: flex;
 
+  gap: 1rem;
+
+}
+
+#locationSection {
+  width: 10rem;
 }
 
 .fields {
-  max-width: 150px;
-  min-width: min-content;
   display: flex;
   flex-direction: column;
-  border: 1px solid;
-  
-  flex: 1;
+  box-sizing: border-box;
+  width: 6rem;
 }
 
+.searchWrapper {
+
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  align-items: center;
+
+
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  margin: 0 1rem;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  gap: 2rem;
+
+
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  transform: translate(-50%, -50%);
+
+
+}
+
+.searchWrapper hr {
+  color: rgba(0, 0, 0, 0.132);
+}
+
+.searchWrapper div {
+  display: flex;
+}
+
+.searchWrapper span {}
+
+.searchWrapper button {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  background-color: #FF385C;
+
+  border: none;
+
+  padding: 0.5rem;
+
+  border-radius: 25px;
+}
+
+.searchWrapper button {
+  cursor: pointer;
+
+  transition: .1s;
+}
+
+
+.searchWrapper button:hover {
+  background-color: #cd2c49;
+}
+
+.hideElement {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}

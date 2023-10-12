@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Propertie from '../components/Propertie';
 import { useNavigate } from 'react-router-dom';
@@ -40,10 +40,27 @@ function Home() {
       });
   }, []);
 
+  // function handlePropertyClick(propertyData) {
+  //   // Navigate to the PropertiePage and pass the property data as state
+  //   navigate(`/PropertiePage/${propertyData.hostName}`, { state: { propertyData } });
+  //   window.scrollTo(0, 0);
+  // }
+
   function handlePropertyClick(propertyData) {
-    // Navigate to the PropertiePage and pass the property data as state
-    navigate(`/PropertiePage/${propertyData.hostName}`, { state: { propertyData } });
+    // Pass startDate and endDate along with propertyData when navigating to PropertiePage
+    navigate(`/PropertiePage/${propertyData.hostName}`, {
+      state: {
+        propertyData,
+        startDate: filters.startDate,
+        endDate: filters.endDate,
+      },
+    });
     window.scrollTo(0, 0);
+  }
+  
+
+  function logoClick() {
+    navigate(`/`);
   }
 
   function handleFilterChange(event) {
@@ -70,17 +87,23 @@ function Home() {
 
     const propertyPrice = parseFloat(property.hostProperties[0].price);
 
-    // Check if the property matches the date criteria
-    const bookedDates = property.hostProperties[0].bookedDates;
-    const isAvailable = !bookedDates.some((bookedDate) => {
-      return (
-        (startDate && endDate && (
-          bookedDate >= startDate && bookedDate <= endDate
-        )) ||
-        (startDate && !endDate && bookedDate >= startDate) ||
-        (!startDate && endDate && bookedDate <= endDate)
-      );
-    });
+    // Flatten the bookedDates arrays into a single array of date strings
+    const bookedDates = property.hostProperties[0].bookedDates.flat();
+
+    if (startDate && endDate) {
+      // Convert startDate and endDate to Date objects
+      const startDateObject = new Date(startDate);
+      const endDateObject = new Date(endDate);
+
+      for (let currentDate = startDateObject; currentDate <= endDateObject; currentDate.setDate(currentDate.getDate() + 1)) {
+        const currentDateStr = currentDate.toISOString().split('T')[0];
+
+        if (bookedDates.includes(currentDateStr)) {
+          // Property is booked for at least one day within the date range
+          return false;
+        }
+      }
+    }
 
     return (
       property.hostProperties[0].title.toLowerCase().includes(title.toLowerCase()) &&
@@ -90,37 +113,63 @@ function Home() {
       String(property.hostProperties[0].beds).includes(beds) &&
       String(property.hostProperties[0].baths).includes(baths) &&
       (!minPrice || propertyPrice >= parseFloat(minPrice)) &&
-      (!maxPrice || propertyPrice <= parseFloat(maxPrice)) &&
-      isAvailable
+      (!maxPrice || propertyPrice <= parseFloat(maxPrice))
     );
   }
+
+
 
   function handleApplyFilter() {
     const filtered = properties.filter(applyFilters);
     setFilteredProperties(filtered);
   }
 
-  function findFirstAvailableDates(bookedDates) {
+  function getTodayDate() {
     const today = new Date();
-    let availableDates = [];
-    let consecutiveAvailableDays = 0;
+    const year = today.getFullYear();
+    let month = (today.getMonth() + 1).toString();
+    let day = today.getDate().toString();
 
-    while (consecutiveAvailableDays < 5) {
-      const nextDate = new Date(today);
-      nextDate.setDate(today.getDate() + consecutiveAvailableDays);
-
-      // Check if the next date is not in the booked dates
-      if (!bookedDates.includes(nextDate.toISOString().split('T')[0])) {
-        availableDates.push(nextDate.toISOString().split('T')[0]);
-        consecutiveAvailableDays++;
-      } else {
-        // Reset consecutive days count if a booked date is encountered
-        consecutiveAvailableDays = 0;
-      }
+    // Pad month and day with a leading zero if needed
+    if (month.length === 1) {
+      month = '0' + month;
+    }
+    if (day.length === 1) {
+      day = '0' + day;
     }
 
-    return availableDates;
+    return `${year}-${month}-${day}`;
   }
+
+  function formatDate(dateStr) {
+    if (dateStr) {
+      const date = new Date(dateStr);
+      date.setDate(date.getDate() + 1); // Add one day to adjust for the time zone
+      const month = date.toLocaleString('default', { month: 'short' });
+      const day = date.getDate();
+      return `${month}. ${day}`;
+    }
+    return '';
+  }
+
+
+  const formattedStartDate = filters.startDate ? formatDate(filters.startDate) : '';
+  const formattedEndDate = filters.endDate ? formatDate(filters.endDate) : '';
+
+
+  const [isFocused, setIsFocused] = useState(false);
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+    inputRef.current.click(); // Trigger a click event to open the date picker
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
+
 
 
 
@@ -131,32 +180,35 @@ function Home() {
 
           <div className='headerTop'>
             <div className='innerHeaderTop'>
-              <span id='regularLogo' className='spanImg'><img src={logo} alt="" /></span>
-              <span id='smallerLogo' className='spanImg'><img src={logoSmall} alt="" /></span>
+              <span onClick={logoClick} className='spanImg' id=''>
+                <img className='regularLogo'  src={logo} alt="" />
+                <img className='smallerLogo' src={logoSmall} alt="" />
+              </span>
               <div className='searchWrapper'>
                 <div id='search'>
-                  <div className='fields'>
+                  <div className='fields' id='locationSection'>
                     <label htmlFor="">Where</label>
                     <input
                       type="text"
                       name="location"
-                      placeholder="Location"
+                      placeholder="Search destinations"
                       value={filters.location}
                       onChange={handleFilterChange}
                     />
                   </div>
-                  <hr />
                   <div className='fields'>
                     <label htmlFor="">Check in</label>
                     <input
-                      type="date"
+
+                      type='date'
                       name="startDate"
                       placeholder="Start Date"
                       value={filters.startDate}
+                      min={getTodayDate()}
                       onChange={handleFilterChange}
                     />
                   </div>
-                  <hr />
+
                   <div className='fields'>
                     <label htmlFor="">Check out</label>
                     <input
@@ -164,21 +216,12 @@ function Home() {
                       name="endDate"
                       placeholder="End Date"
                       value={filters.endDate}
-                      onChange={handleFilterChange}
-                    />
-                  </div>
-                  <hr />
-                  <div className='fields'>
-                    <label htmlFor="">Who</label>
-                    <input
-                      type="text"
-                      name="guests"
-                      placeholder="Guests"
-                      value={filters.guests}
+                      min={getTodayDate()}
                       onChange={handleFilterChange}
                     />
                   </div>
                 </div>
+                {/* <span>Start your Search</span> */}
                 <button onClick={handleApplyFilter}>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -186,10 +229,12 @@ function Home() {
                 </button>
               </div>
               <div className='profileSection'>
-                <span>Airbnb your home</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                </svg>
+                <div className='hideElement'>
+                  <span>Airbnb your home</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                  </svg>
+                </div>
                 <div className='profileWrapper'>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -213,6 +258,8 @@ function Home() {
               price={property.hostProperties[0].price}
               images={property.hostProperties[0].pictures}
               rating={property.hostProperties[0].rating}
+              startDate={formattedStartDate} // Pass formatted start date
+              endDate={formattedEndDate}
               onClickFunction={() => handlePropertyClick(property)}
             />
           ))}

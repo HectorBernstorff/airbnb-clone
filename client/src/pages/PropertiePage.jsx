@@ -30,6 +30,13 @@ export default function PropertiePage() {
     const [imageFileNames, setImageFileNames] = useState(propertyData.hostProperties[0].pictures);
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
+    const [startDate, setStartDate] = useState(location.state.startDate);
+    const [endDate, setEndDate] = useState(location.state.endDate);
+
+    useEffect(() => {
+        setStartDate(location.state.startDate);
+        setEndDate(location.state.endDate);
+    }, [location.state.startDate, location.state.endDate]);
 
 
     useEffect(() => {
@@ -67,6 +74,19 @@ export default function PropertiePage() {
             console.error('Error loading data:', error);
         }
     };
+
+    // const fetchData = async () => {
+    //     try {
+    //         const response = await axios.get(`http://localhost:5000/properties/${hostname}`);
+    //         const data = response.data;
+    //         setPropertyData(data);
+    //         setImageFileNames(data.imageFileNames); // Update image file names in the component state
+    //     } catch (error) {
+    //         console.error('Error loading data:', error);
+    //     }
+    // };
+
+
 
 
 
@@ -216,6 +236,29 @@ export default function PropertiePage() {
         return price * 5;
     };
 
+    const calculatePrice = () => {
+        if (startDate || endDate != "") {
+            // Convert the dates to JavaScript Date objects
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+
+            // Calculate the time difference in milliseconds
+            const timeDiff = end - start;
+
+            // Calculate the number of days by dividing the time difference
+            // by the number of milliseconds in a day
+            const days = Math.floor(timeDiff / (24 * 60 * 60 * 1000)) + 1;
+
+            // Adjust the price based on the number of days
+            console.log("nao eh vazio");
+            console.log(price * days);
+            return price * (days - 1);
+        } else {
+            console.log(price);
+            return price * 4;
+        }
+    };
+
 
     return (
         <>
@@ -294,7 +337,7 @@ export default function PropertiePage() {
                                         </div>
                                         <div className='inputArea'>
                                             <label htmlFor="">Description</label>
-                                            <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+                                            <textarea id='descriptionTextArea' type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                                         </div>
                                         <div id='inputNumbers'>
                                             <button onClick={() => handleSave(propertyData.hostName, propertyData.hostProperties[0].title)}>Salvar</button>
@@ -322,24 +365,26 @@ export default function PropertiePage() {
                             </div>
                             <div className='titleInfo'>
                                 <div className='titleBottom'>
-                                    <div className='ratingSection'>
+
+                                    <span className='ratingSection'>
                                         <svg width="1rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
                                         </svg>
-                                        <span>{propertyData.hostProperties[0].rating}</span>
-                                    </div>
+                                        {propertyData.hostProperties[0].rating}
+                                    </span>
+
                                     <div>
                                         <span className='location'>{propertyData.hostProperties[0].location}</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <span>
+                                    <span className='titleShareSave'>
                                         <svg width="16px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                                         </svg>
                                         <span>Share</span>
                                     </span>
-                                    <span>
+                                    <span className='titleShareSave'>
                                         <svg width="16px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                                         </svg>
@@ -361,6 +406,21 @@ export default function PropertiePage() {
                                 ))}
                             </div>
 
+                            {/* <div className='propertie-image-grid'>
+                                {imageFileNames && imageFileNames.length > 0 ? (
+                                    imageFileNames.slice(0, 5).map((imageName, index) => (
+                                        <img
+                                            onClick={() => handlePictureClick(propertyData)}
+                                            key={index}
+                                            src={`http://localhost:5000/uploads/${imageName}`}
+                                        />
+                                    ))
+                                ) : (
+                                    <p>No images available</p> // Display a message when no images are found
+                                )}
+                            </div> */}
+
+
 
                         </div>
                     </div>
@@ -380,7 +440,6 @@ export default function PropertiePage() {
                             <div>
                                 <span className=''>
                                     {propertyData.hostProperties[0].description}
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
                                 </span>
                             </div>
                         </div>
@@ -397,19 +456,37 @@ export default function PropertiePage() {
                             </div>
                             <div className='dateDetails'>
                                 <div>
-                                    <div id='borderLeft' className='lineBreak'>
-                                        <span>Checkin</span>
-                                        <span className='checkIn'>{checkInDate.toDateString()}</span>
-                                    </div>
-                                    <div id='borderRight' className='lineBreak'>
-                                        <span>Checkout</span>
-                                        <span className='checkOut'>{checkOutDate.toDateString()}</span>
-                                    </div>
+                                    {startDate.length != "" ? (
+                                        // Render content when startDate is not null
+                                        <div id='borderLeft' className='lineBreak'>
+                                            <span>Checkin</span>
+                                            <span className='checkIn'>{startDate}</span>
+                                        </div>
+                                    ) : (
+                                        // Render content when startDate is null
+                                        <div id='borderLeft' className='lineBreak'>
+                                            <span>Checkin</span>
+                                            <span className='checkIn'>{checkInDate.toDateString()}</span>
+                                        </div>
+                                    )}
+
+                                    {endDate.length != "" ? (
+                                        // Render content when startDate is not null
+                                        <div id='borderRight' className='lineBreak'>
+                                            <span>Checkout</span>
+                                            <span className='checkIn'>{endDate}</span>
+                                        </div>
+                                    ) : (
+                                        // Render content when startDate is null
+                                        <div id='borderRight' className='lineBreak'>
+                                            <span>Checkout</span>
+                                            <span className='checkIn'>{checkOutDate.toDateString()}</span>
+                                        </div>
+                                    )}
+
+
                                 </div>
-                                <div id='borderBottom' className='lineBreak'>
-                                    <span>Guests</span>
-                                    <span>1 guest</span>
-                                </div>
+
                             </div>
                             <div className='reserveSection'>
                                 <button>Reserve</button>
@@ -418,7 +495,7 @@ export default function PropertiePage() {
                             <hr />
                             <div className='priceTotal'>
                                 <span>Total</span>
-                                <span>${calculateTotalPrice()}  CAD</span>
+                                <span>${calculatePrice()}  CAD</span>
                             </div>
                         </div>
 

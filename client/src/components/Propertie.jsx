@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../Style/Propertie.css';
 
-export default function Propertie({ location, title, rating, price, images, onClickFunction }) {
+export default function Propertie({ location, title, rating, price, images, onClickFunction, startDate, endDate }) {
     const containerRef = useRef(null);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -101,7 +101,13 @@ export default function Propertie({ location, title, rating, price, images, onCl
                         </span>
                     </div>
                     <span className="infoTitle">{title}</span>
-                    <span className="infoTitle">Oct. 22 - 27</span>
+
+                    {startDate.length + endDate.length > 10 && (
+                        <span className="infoTitle">
+                            {startDate + " - " + endDate}
+                        </span>
+                    )}
+
                 </div>
                 <div>
                     <span className="price">${price} CAD</span>

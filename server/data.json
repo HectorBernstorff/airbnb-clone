@@ -4,14 +4,14 @@
       "hostName": "Ella White",
       "hostProperties": [
         {
-          "title": "Home",
-          "location": "Montreal, Canada",
+          "title": "Modern Downtown Condo",
+          "location": "Toronto, ON, Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
           "baths": 2,
-          "price": "55",
-          "description": "Escape to a cozy lakeside cottage and enjoy peaceful mornings by the water. Perfect for nature lovers.",
+          "price": "150",
+          "description": "Enjoy a stylish stay in the heart of downtown Toronto. This modern condo features breathtaking city views, a fully equipped kitchen, and a cozy living area. Just steps away from the CN Tower, Rogers Centre, and Union Station.",
           "bookedDates": [
             [
               "2023-10-09",
@@ -28,10 +28,6 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "WhatsApp Image 2023-10-02 at 17.54.51_6ad965f4.jpg",
-            "s3422dwg-cfp-00000ff090-bk.jpg",
-            "DL.jpg",
-            "wallpaper.jpg"
           ]
         }
       ]
@@ -40,14 +36,14 @@
       "hostName": "Oliver Johnson",
       "hostProperties": [
         {
-          "title": "Downtown Loft with Skyline Views",
-          "location": "Toronto, Canada",
-          "guests": 2,
-          "bedrooms": 1,
-          "beds": 1,
-          "baths": 1,
-          "price": 150,
-          "description": "Stay in a stylish downtown loft with breathtaking skyline views. Perfect for couples exploring the city.",
+          "title": "Luxury Waterfront Apartment",
+          "location": "Vancouver, BC, Canada",
+          "guests": "6",
+          "bedrooms": 3,
+          "beds": 4,
+          "baths": 2.5,
+          "price": 250,
+          "description": "Immerse yourself in the beauty of Vancouver's waterfront with this luxury apartment. Wake up to stunning ocean views, relax on the private balcony, and take advantage of the building's amenities, including a pool and gym.",
           "bookedDates": [
             [
               "2023-04-20",
@@ -70,20 +66,6 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "WhatsApp Image 2023-10-02 at 17.54.51_6ad965f4.jpg",
-            "s3422dwg-cfp-00000ff090-bk.jpg",
-            "s3422dwg-cfp-00000td090-bk.jpg",
-            "s3422dwg-cfp-00090lp090-bk.jpg",
-            "s3422dwg-cfp-00180bf090-bk.jpg",
-            "s3422dwg-cfp-port-bk.jpg",
-            "s3422dwg-xfp-01-bk (1).jpg",
-            "s3422dwg-xfp-02-bk.jpg",
-            "s3422dwg-xfp-03-bk.jpg",
-            "81PUJjhTkkL._CR175,120,408,408_._FMjpg_.jpg",
-            "WhatsApp Image 2023-10-02 at 17.58.26_ba8ab3e8.jpg",
-            "81wL6eKZ7rL._CR0,0,1824,405_._FMjpg_.jpg",
-            "WhatsApp Image 2023-10-02 at 18.13.26_cb32eacc.jpg",
-            "My-Post-2021-07-27T152659.149.webp"
           ]
         }
       ]
@@ -92,14 +74,14 @@
       "hostName": "Sophia Brown",
       "hostProperties": [
         {
-          "title": "Rustic Mountain Cabin",
-          "location": "Banff, Canada",
+          "title": " Charming Plateau Duplex",
+          "location": "Montreal, QC, Canada",
           "guests": 4,
           "bedrooms": 2,
-          "beds": 2,
-          "baths": 2,
-          "price": "500",
-          "description": "Experience the charm of a rustic mountain cabin nestled in the heart of Banff National Park.",
+          "beds": 3,
+          "baths": 1,
+          "price": "120",
+          "description": "Experience the unique charm of Montreal's Plateau neighborhood in this cozy duplex. Enjoy original hardwood floors, a fully-equipped kitchen, and a sunny patio. Just a short walk from trendy cafes and shops.",
           "bookedDates": [
             [
               "2023-07-05",
@@ -121,9 +103,7 @@
             ]
           ],
           "rating": 4.8,
-          "pictures": [
-            "BbackgroundPicture.jpg"
-          ]
+          "pictures": []
         }
       ]
     },
@@ -131,14 +111,14 @@
       "hostName": "Liam Davis",
       "hostProperties": [
         {
-          "title": "Beachfront Bungalow",
-          "location": "Victoria, Canada",
-          "guests": 6,
-          "bedrooms": 3,
-          "beds": 3,
-          "baths": 2,
-          "price": 350,
-          "description": "Enjoy the beauty of a beachfront bungalow with stunning ocean views. Perfect for a coastal getaway.",
+          "title": "Spacious Family Home",
+          "location": "Calgary, AB, Canada",
+          "guests": 8,
+          "bedrooms": 4,
+          "beds": 6,
+          "baths": 3,
+          "price": 180,
+          "description": "Perfect for families or groups, this spacious home offers a comfortable stay in Calgary. With a large backyard, fully equipped kitchen, and a cozy living room, you'll feel right at home. Close to shopping and outdoor activities.",
           "bookedDates": [
             [
               "2023-06-25",
@@ -161,10 +141,6 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg",
-            "wallpaper.jpg",
-            "logo.png",
-            "DL.jpg"
           ]
         }
       ]
@@ -173,14 +149,14 @@
       "hostName": "Mia Wilson",
       "hostProperties": [
         {
-          "title": "Countryside Retreat",
-          "location": "Quebec City, Canada",
-          "guests": 4,
-          "bedrooms": 2,
-          "beds": 2,
-          "baths": 2,
-          "price": 180,
-          "description": "Escape to the peaceful countryside in this charming cottage. Ideal for a quiet getaway.",
+          "title": "Modern Downtown Loft",
+          "location": "Edmonton, AB, Canada",
+          "guests": 2,
+          "bedrooms": 1,
+          "beds": 1,
+          "baths": 1,
+          "price": 90,
+          "description": "Stay in style in this modern loft in the heart of Edmonton's downtown. The open-concept design, large windows, and proximity to restaurants and entertainment make it perfect for couples or solo travelers.",
           "bookedDates": [
             [
               "2023-05-15",
@@ -204,7 +180,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -213,14 +189,14 @@
       "hostName": "Emma Taylor",
       "hostProperties": [
         {
-          "title": "Cozy Forest Cabin",
-          "location": "Calgary, Canada",
-          "guests": 4,
-          "bedrooms": 2,
-          "beds": 2,
-          "baths": 1,
-          "price": "175",
-          "description": "Experience the serenity of the forest in this cozy cabin. Perfect for a peaceful retreat.",
+          "title": "Historic Townhouse",
+          "location": "Ottawa, ON, Canada",
+          "guests": 6,
+          "bedrooms": 3,
+          "beds": 4,
+          "baths": 2,
+          "price": "160",
+          "description": "Step back in time with this historic townhouse in the heart of Ottawa. Immerse yourself in the city's rich history while enjoying modern amenities, including a fully equipped kitchen and a charming courtyard.",
           "bookedDates": [
             [
               "2023-06-15",
@@ -243,7 +219,7 @@
           ],
           "rating": 4.6,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -253,13 +229,13 @@
       "hostProperties": [
         {
           "title": "Charming Vineyard Villa",
-          "location": "Napa Valley, USA",
-          "guests": 8,
-          "bedrooms": 4,
-          "beds": 4,
-          "baths": 3,
-          "price": 500,
-          "description": "Experience the beauty of wine country in this charming villa surrounded by vineyards.",
+          "location": "Winnipeg, MB, Canada",
+          "guests": 3,
+          "bedrooms": 1,
+          "beds": 2,
+          "baths": 1,
+          "price": 75,
+          "description": "This cozy bungalow is perfect for a quiet retreat in Winnipeg. The warm interior, private backyard, and easy access to parks and museums make it an ideal spot for a couple's getaway.",
           "bookedDates": [
             [
               "2023-06-15",
@@ -278,7 +254,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -287,14 +263,14 @@
       "hostName": "Aiden Wilson",
       "hostProperties": [
         {
-          "title": "Historic City Apartment",
-          "location": "Boston, USA",
-          "guests": 3,
-          "bedrooms": 1,
-          "beds": 1,
-          "baths": 1,
-          "price": 180,
-          "description": "Stay in a historic apartment in the heart of Boston and explore the city's rich heritage.",
+          "title": "Riverside Retreat",
+          "location": "Quebec City, QC, Canada",
+          "guests": 5,
+          "bedrooms": 2,
+          "beds": 3,
+          "baths": 1.5,
+          "price": 140,
+          "description": "Enjoy a peaceful stay along the St. Lawrence River in this charming Quebec City retreat. With a spacious deck, fully equipped kitchen, and nearby hiking trails, it's a perfect escape for nature lovers.",
           "bookedDates": [
             [
               "2023-04-10",
@@ -312,7 +288,7 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -321,14 +297,14 @@
       "hostName": "Sophie Davis",
       "hostProperties": [
         {
-          "title": "Mountain View Retreat",
-          "location": "Aspen, USA",
-          "guests": 6,
-          "bedrooms": 3,
+          "title": "Suburban Comfort",
+          "location": "Mississauga, ON, Canada",
+          "guests": 4,
+          "bedrooms": 2,
           "beds": 3,
           "baths": 2,
-          "price": 350,
-          "description": "Enjoy breathtaking mountain views from this cozy retreat in the picturesque town of Aspen.",
+          "price": 110,
+          "description": "Experience the comforts of suburban living in this Mississauga home. Relax in the spacious backyard, cook meals in the modern kitchen, and explore nearby shopping and parks.",
           "bookedDates": [
             [
               "2023-07-10",
@@ -347,7 +323,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -356,14 +332,14 @@
       "hostName": "Mason Smith",
       "hostProperties": [
         {
-          "title": "Oceanfront Paradise",
-          "location": "Maui, USA",
-          "guests": 4,
-          "bedrooms": 2,
-          "beds": 2,
-          "baths": 2,
-          "price": 400,
-          "description": "Experience the beauty of Hawaii in this oceanfront paradise with stunning sunsets.",
+          "title": "Artsy Loft in the Core",
+          "location": "Hamilton, ON, Canada",
+          "guests": 2,
+          "bedrooms": 1,
+          "beds": 1,
+          "baths": 1,
+          "price": 100,
+          "description": "Stay in this unique loft located in the heart of Hamilton. With its artistic decor, high ceilings, and proximity to galleries and cafes, it's the perfect spot for creative souls.",
           "bookedDates": [
             [
               "2023-06-25",
@@ -382,7 +358,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -391,14 +367,14 @@
       "hostName": "Lucas Miller",
       "hostProperties": [
         {
-          "title": "Ski-In/Ski-Out Chalet",
-          "location": "Park City, USA",
-          "guests": 8,
-          "bedrooms": 4,
+          "title": "Family-Friendly Townhome",
+          "location": "Brampton, ON, Canada",
+          "guests": 6,
+          "bedrooms": 3,
           "beds": 4,
-          "baths": 3,
-          "price": 550,
-          "description": "Hit the slopes from this cozy ski-in/ski-out chalet in the heart of Park City.",
+          "baths": 2.5,
+          "price": 130,
+          "description": "Bring the whole family to this welcoming Brampton townhome. With its kid-friendly amenities, fully equipped kitchen, and easy access to local attractions, it's ideal for a family vacation.",
           "bookedDates": [
             [
               "2023-01-15",
@@ -418,7 +394,7 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -427,14 +403,14 @@
       "hostName": "Ava Johnson",
       "hostProperties": [
         {
-          "title": "Desert Oasis Villa",
-          "location": "Scottsdale, USA",
-          "guests": 6,
-          "bedrooms": 3,
+          "title": "Oceanfront Cottage",
+          "location": "Victoria, BC, Canada",
+          "guests": 4,
+          "bedrooms": 2,
           "beds": 3,
-          "baths": 2,
-          "price": 300,
-          "description": "Relax in the desert oasis of Scottsdale in this beautiful villa with a private pool.",
+          "baths": 1,
+          "price": 175,
+          "description": "Experience the charm of Vancouver Island with this oceanfront cottage in Victoria. Wake up to stunning sunrise views, explore the beach just steps away, and relax by the cozy fireplace in the evenings.",
           "bookedDates": [
             [
               "2023-04-10",
@@ -452,7 +428,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -461,14 +437,14 @@
       "hostName": "Liam Davis",
       "hostProperties": [
         {
-          "title": "Historic Waterfront Mansion",
-          "location": "Charleston, USA",
-          "guests": 10,
-          "bedrooms": 5,
-          "beds": 5,
-          "baths": 4,
-          "price": 750,
-          "description": "Step back in time in this historic waterfront mansion in the charming city of Charleston.",
+          "title": "Prairie Oasis",
+          "location": "Saskatoon, SK, Canada",
+          "guests": 4,
+          "bedrooms": 2,
+          "beds": 3,
+          "baths": 1.5,
+          "price": 120,
+          "description": "Enjoy the vast Saskatchewan prairies in this peaceful oasis in Saskatoon. With a spacious backyard, fully-equipped kitchen, and easy access to local farmers' markets, it's a perfect retreat.",
           "bookedDates": [
             [
               "2023-04-15",
@@ -487,7 +463,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -496,14 +472,14 @@
       "hostName": "Olivia Martin",
       "hostProperties": [
         {
-          "title": "Riverside Retreat",
-          "location": "Breckenridge, USA",
-          "guests": 6,
-          "bedrooms": 3,
-          "beds": 3,
-          "baths": 2,
-          "price": 320,
-          "description": "Enjoy the tranquility of a riverside retreat in the picturesque town of Breckenridge.",
+          "title": "Modern Downtown Apartment",
+          "location": "Regina, SK, Canada",
+          "guests": 2,
+          "bedrooms": 1,
+          "beds": 1,
+          "baths": 1,
+          "price": 80,
+          "description": "Stay in the heart of Regina in this modern downtown apartment. With sleek decor, a fully-equipped kitchen, and proximity to cultural attractions, it's a great spot for solo travelers or couples.",
           "bookedDates": [
             [
               "2023-06-15",
@@ -526,7 +502,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -535,14 +511,14 @@
       "hostName": "William Garcia",
       "hostProperties": [
         {
-          "title": "Sunny Beach House",
-          "location": "Santa Monica, USA",
-          "guests": 4,
-          "bedrooms": 2,
-          "beds": 2,
+          "title": "Coastal Getaway",
+          "location": "Halifax, NS, Canada",
+          "guests": 5,
+          "bedrooms": 3,
+          "beds": 4,
           "baths": 2,
-          "price": 380,
-          "description": "Bask in the sun at this delightful beach house in Santa Monica with easy access to the beach.",
+          "price": 150,
+          "description": "Experience the coastal charm of Halifax with this spacious getaway. Enjoy sea views, relax on the deck, and explore the historic waterfront and local seafood restaurants.",
           "bookedDates": [
             [
               "2023-06-25",
@@ -561,7 +537,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -570,14 +546,14 @@
       "hostName": "Scarlett White",
       "hostProperties": [
         {
-          "title": "Mountain Cabin Hideaway",
-          "location": "Lake Tahoe, USA",
-          "guests": 5,
+          "title": "Lakeside Cabin Retreat",
+          "location": "Sudbury, ON, Canada",
+          "guests": 6,
           "bedrooms": 2,
-          "beds": 2,
+          "beds": 5,
           "baths": 1,
-          "price": 280,
-          "description": "Escape to the mountains in this cozy cabin hideaway near beautiful Lake Tahoe.",
+          "price": 150,
+          "description": "Escape to the serenity of Northern Ontario with this lakeside cabin retreat. Enjoy fishing, boating, and campfires by the lake, and fall asleep to the soothing sounds of nature.",
           "bookedDates": [
             [
               "2023-07-10",
@@ -596,7 +572,7 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -605,14 +581,14 @@
       "hostName": "Henry Adams",
       "hostProperties": [
         {
-          "title": "Tropical Paradise Villa",
-          "location": "Maui, USA",
-          "guests": 6,
-          "bedrooms": 3,
+          "title": "Scenic Riverside Cabin",
+          "location": "Sherbrooke, QC, Canada",
+          "guests": 4,
+          "bedrooms": 2,
           "beds": 3,
-          "baths": 3,
-          "price": 500,
-          "description": "Experience the ultimate tropical getaway in this luxurious villa in Maui with a private pool.",
+          "baths": 1,
+          "price": 120,
+          "description": "Unplug and unwind in a scenic riverside cabin near Sherbrooke. Fish in the pristine waters, hike the nearby trails, and savor the peaceful ambiance of the Quebec countryside.",
           "bookedDates": [
             [
               "2023-06-15",
@@ -635,7 +611,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -644,14 +620,14 @@
       "hostName": "Emily Lewis",
       "hostProperties": [
         {
-          "title": "Countryside Manor",
-          "location": "Cotswolds, UK",
-          "guests": 8,
-          "bedrooms": 4,
-          "beds": 4,
-          "baths": 3,
-          "price": 350,
-          "description": "Escape to the English countryside in this charming manor house in the Cotswolds.",
+          "title": "Charming Townhouse",
+          "location": "Trois-Rivières, QC, Canada",
+          "guests": 4,
+          "bedrooms": 2,
+          "beds": 3,
+          "baths": 1.5,
+          "price": 110,
+          "description": "Discover the charm of Trois-Rivières with a stay in this quaint townhouse. Stroll through historic neighborhoods, dine at local cafes, and relax in a comfortable, well-appointed space.",
           "bookedDates": [
             [
               "2023-04-10",
@@ -669,7 +645,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg"
+             
           ]
         }
       ]
@@ -678,14 +654,14 @@
       "hostName": "Sophia Patel",
       "hostProperties": [
         {
-          "title": "Seaside Villa Paradise",
-          "location": "Mykonos, Greece",
-          "guests": 8,
-          "bedrooms": 4,
+          "title": "Prairie Homestead",
+          "location": "Red Deer, AB, Canada",
+          "guests": 6,
+          "bedrooms": 3,
           "beds": 4,
-          "baths": 4,
-          "price": 600,
-          "description": "Indulge in luxury at this stunning seaside villa on the beautiful island of Mykonos.",
+          "baths": 2,
+          "price": 155,
+          "description": "Enjoy the simplicity of the prairies with a stay in this welcoming homestead in Red Deer. Experience rural life, explore local farms, and take in the wide-open spaces of Alberta's heartland.",
           "bookedDates": [
             [
               "2023-06-15",
@@ -708,7 +684,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+
           ]
         }
       ]
@@ -717,14 +693,14 @@
       "hostName": "Liam Smith",
       "hostProperties": [
         {
-          "title": "Historic City View Apartment",
-          "location": "Paris, France",
+          "title": " Modern Condo by Parliament",
+          "location": "Gatineau, QC, Canada",
           "guests": 4,
           "bedrooms": 2,
           "beds": 2,
-          "baths": 1,
-          "price": 350,
-          "description": "Stay in a historic apartment in the heart of Paris with breathtaking city views.",
+          "baths": 2,
+          "price": 175,
+          "description": "Discover the heart of Canada's capital with a stay in this modern condo in Gatineau, just steps from Parliament Hill. Enjoy contemporary design, city views, and easy access to cultural attractions.",
           "bookedDates": [
             [
               "2023-04-10",
@@ -742,7 +718,7 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg"
+
           ]
         }
       ]
@@ -751,14 +727,14 @@
       "hostName": "Olivia Wilson",
       "hostProperties": [
         {
-          "title": "Luxury Ski Chalet",
-          "location": "Chamonix, France",
-          "guests": 10,
-          "bedrooms": 5,
-          "beds": 5,
-          "baths": 4,
-          "price": 800,
-          "description": "Experience world-class skiing in this luxurious chalet in Chamonix with stunning alpine views.",
+          "title": "Stylish Downtown Loft",
+          "location": "Montreal, QC, Canada",
+          "guests": 4,
+          "bedrooms": 1,
+          "beds": 2,
+          "baths": 1,
+          "price": 145,
+          "description": "Experience the vibrancy of Montreal in this stylish downtown loft. Featuring contemporary decor, large windows, and easy access to the city's bustling streets, it's the perfect spot for exploring the city's nightlife, shops, and cuisine.",
           "bookedDates": [
             [
               "2023-01-15",
@@ -778,7 +754,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+
           ]
         }
       ]
@@ -787,14 +763,14 @@
       "hostName": "Ella Brown",
       "hostProperties": [
         {
-          "title": "Vineyard Retreat",
-          "location": "Napa Valley, USA",
-          "guests": 6,
-          "bedrooms": 3,
-          "beds": 3,
-          "baths": 3,
-          "price": 450,
-          "description": "Relax in a luxurious vineyard retreat in the heart of Napa Valley with wine tasting experiences.",
+          "title": "Plateau Hideaway",
+          "location": "Montreal, QC, Canada",
+          "guests": 2,
+          "bedrooms": 1,
+          "beds": 1,
+          "baths": 1,
+          "price": 100,
+          "description": "Discover the charm of Montreal's Plateau neighborhood with a stay in this cozy hideaway. Enjoy a tranquil escape with a private garden, quaint cafes, and easy access to the city's arts and culture scene.",
           "bookedDates": [
             [
               "2023-06-15",
@@ -817,7 +793,7 @@
           ],
           "rating": 4.8,
           "pictures": [
-            "BbackgroundPicture.jpg"
+
           ]
         }
       ]
@@ -826,14 +802,14 @@
       "hostName": "Noah Patel",
       "hostProperties": [
         {
-          "title": "Historic Scottish Castle",
-          "location": "Edinburgh, UK",
-          "guests": 12,
-          "bedrooms": 6,
-          "beds": 6,
-          "baths": 6,
-          "price": 1000,
-          "description": "Live like royalty in this historic Scottish castle in the beautiful city of Edinburgh.",
+          "title": "Penthouse with Panoramic Views",
+          "location": "Montreal, QC, Canada",
+          "guests": 4,
+          "bedrooms": 2,
+          "beds": 3,
+          "baths": 2,
+          "price": 250,
+          "description": "Elevate your stay in Montreal with this luxurious penthouse offering breathtaking panoramic views of the city skyline. Enjoy modern amenities, a private terrace, and a location close to the city's finest dining and entertainment.",
           "bookedDates": [
             [
               "2023-04-15",
@@ -852,7 +828,7 @@
           ],
           "rating": 4.9,
           "pictures": [
-            "BbackgroundPicture.jpg"
+
           ]
         }
       ]
@@ -861,14 +837,14 @@
       "hostName": "Lucas Miller",
       "hostProperties": [
         {
-          "title": "Lakeside Log Cabin",
-          "location": "Lake Tahoe, USA",
-          "guests": 4,
+          "title": "Historic Old Town Apartment",
+          "location": "Montreal, QC, Canada",
+          "guests": 6,
           "bedrooms": 2,
-          "beds": 2,
-          "baths": 2,
-          "price": 320,
-          "description": "Experience the charm of a lakeside log cabin near beautiful Lake Tahoe.",
+          "beds": 3,
+          "baths": 1.5,
+          "price": 175,
+          "description": "Immerse yourself in the rich history of Old Montreal with a stay in this historic apartment. With exposed brick walls, a fully-equipped kitchen, and proximity to iconic sites like Notre-Dame Basilica, it's the perfect place to explore the city's past.",
           "bookedDates": [
             [
               "2023-07-10",
@@ -887,7 +863,7 @@
           ],
           "rating": 4.7,
           "pictures": [
-            "BbackgroundPicture.jpg"
+
           ]
         }
       ]
