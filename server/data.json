@@ -28,6 +28,13 @@
           ],
           "rating": 4.7,
           "pictures": [
+            "08fea92b-ea7b-4d44-a498-d6df92bad385.webp",
+            "52a86350-265f-48fb-a15b-9a0c56fae1ee.webp",
+            "472edb50-ee13-4bf4-9530-48b0ad2a6e48.webp",
+            "934f7a44-4e46-438c-bb8e-1ea938ffe522.webp",
+            "ca4a5e18-a765-4145-ad40-fd0c7fb342d6.webp",
+            "ef656669-71f5-4cd5-b934-3dd1ebd9ca1e.webp",
+            "f22799c5-2289-4210-821a-bc7b8793d3c1.webp"
           ]
         }
       ]
@@ -66,6 +73,13 @@
           ],
           "rating": 4.9,
           "pictures": [
+            "0b4d5d2f-8a96-4296-b455-8e795c6a09df.webp",
+            "4c579268-33c5-4dbf-af56-adcc57d0abda.webp",
+            "8d3e4df7-cb76-4ba4-a60d-80f44569c172.webp",
+            "356baff8-9181-448f-b04a-4734337eeaea.webp",
+            "368a50c2-65c5-42c9-8027-f1e134dd69a3.webp",
+            "a74808c8-f3de-47fc-aa8b-8ec72d9e1676.webp",
+            "e456b928-171d-4395-a2cd-8997a7700573.webp"
           ]
         }
       ]
@@ -103,7 +117,15 @@
             ]
           ],
           "rating": 4.8,
-          "pictures": []
+          "pictures": [
+            "0a9b6456-4ebf-4212-b296-342313310d74.webp",
+            "7b685243-93a1-43cd-9a2b-c22f834d7ff3.webp",
+            "8ee8a2b8-cdc3-403f-aae9-84910f4ab893.webp",
+            "137f41e9-44f2-43d6-810b-944fb65f2156.webp",
+            "349fec62-464f-4d3d-b615-01a466e41035.webp",
+            "2981615b-bd05-4fa0-882b-d780baf9eacf.webp",
+            "ec1e2cb0-6031-4b09-b2a4-63b352a594b8.webp"
+          ]
         }
       ]
     },
@@ -111,14 +133,14 @@
       "hostName": "Liam Davis",
       "hostProperties": [
         {
-          "title": "Spacious Family Home",
-          "location": "Calgary, AB, Canada",
-          "guests": 8,
-          "bedrooms": 4,
-          "beds": 6,
-          "baths": 3,
-          "price": 180,
-          "description": "Perfect for families or groups, this spacious home offers a comfortable stay in Calgary. With a large backyard, fully equipped kitchen, and a cozy living room, you'll feel right at home. Close to shopping and outdoor activities.",
+          "title": "Prairie Oasis",
+          "location": "Saskatoon, SK, Canada",
+          "guests": 4,
+          "bedrooms": 2,
+          "beds": 3,
+          "baths": 1.5,
+          "price": 120,
+          "description": "Enjoy the vast Saskatchewan prairies in this peaceful oasis in Saskatoon. With a spacious backyard, fully-equipped kitchen, and easy access to local farmers' markets, it's a perfect retreat.",
           "bookedDates": [
             [
               "2023-06-25",
@@ -141,6 +163,22 @@
           ],
           "rating": 4.7,
           "pictures": [
+            "00d2d072-372a-420e-ad11-152677b8a08d.webp",
+            "2f36b37e-2f0e-42b2-a1f2-a6c59a63472b.webp",
+            "4b8b2997-deb3-4541-9415-2f8bfd84c6b2.webp",
+            "4beec335-2c29-4047-8224-837ac07e93c6.webp",
+            "6ab97b35-6a35-4f44-acac-d662d147b09f.webp",
+            "6bf215ce-94ff-47fe-9a5e-5812cc32df12.webp",
+            "7dfebd36-1a30-4218-881d-71bfea5aeac7.webp",
+            "010da1d5-265f-4fef-8ba2-ec8f628592ee.webp",
+            "28d1fc96-9569-4b4e-863c-49bfc949b382.webp",
+            "43dbdf6f-49f9-4670-aefa-fa7a27285cf3.webp",
+            "b131fb7f-837b-4e54-8fc3-0d206f5c7642.webp",
+            "b808f68f-1b9c-427a-a389-8f4e8ecde720.webp",
+            "d13f9759-59fe-4521-8133-4d07069985c6.webp",
+            "d72800b9-b604-4d0e-9486-e5d68516220f.webp",
+            "010da1d5-265f-4fef-8ba2-ec8f628592ee.webp",
+            "2ff3f69e-c90f-4c73-aa44-97a2b3742ef7.webp"
           ]
         }
       ]
@@ -180,7 +218,13 @@
           ],
           "rating": 4.8,
           "pictures": [
-             
+            "87fc0f55-df26-4d40-949c-3e4a61e59e1b.webp",
+            "937e4c57-0622-4693-87ce-7bc641127517.webp",
+            "76077530-3582-4a35-b800-42f4b28a5054.webp",
+            "b115b33b-9cf8-4cf3-894b-d1cb3de355be.webp",
+            "c3f619c9-ae75-4ec7-b2b0-1f6576a21857.webp",
+            "dcb852c7-ac8d-417c-8f50-7c1d776b3cac.webp",
+            "f61a2fe8-37e4-474d-af4e-cfff3fcccc72.webp"
           ]
         }
       ]
@@ -219,7 +263,13 @@
           ],
           "rating": 4.6,
           "pictures": [
-             
+            "02f68758_original.webp",
+            "87273c74_original.webp",
+            "b7940d88_original.webp",
+            "b6981354_original.webp",
+            "c1fb6c66_original.webp",
+            "c51d0a56_original.webp",
+            "fa20793c_original.webp"
           ]
         }
       ]
@@ -254,7 +304,13 @@
           ],
           "rating": 4.9,
           "pictures": [
-             
+            "2fa4075e-e20b-41a0-b48e-433bb10175be.webp",
+            "9a086088-9a16-4c5c-a4d8-3973d73b2ce2.webp",
+            "66cd96ee-ae27-45f0-b6f5-b1abfe96cfb5.webp",
+            "1406d96a-c9fc-4bca-b47e-cecfc31c057f.webp",
+            "b0e2617a-77e6-4f27-a6c7-a6bcb8d92603.webp",
+            "e2b37ecb-0d0f-415c-b2ca-98a5848c5fdb.webp",
+            "f8446ebc-55ec-4306-a5e2-705648556ec8.webp"
           ]
         }
       ]
@@ -288,7 +344,13 @@
           ],
           "rating": 4.7,
           "pictures": [
-             
+            "1eac9d91-378f-4eeb-925b-15d144d7aac2.webp",
+            "2e17375d-d4eb-46c0-8522-79fa7439ff7b.webp",
+            "7eafb319-191a-4eb1-ae9e-a5a6e044932a.webp",
+            "8f9f651f-6a21-4e65-b95e-b3a312c61add.webp",
+            "94a67543-84af-4f05-835e-423bcc656aab.webp",
+            "a96559cb-ad29-4707-ae5b-6c726af25d92.webp",
+            "aa126bb3-bfa5-4bcd-85fb-db1c63e07ceb.webp"
           ]
         }
       ]
@@ -323,7 +385,13 @@
           ],
           "rating": 4.8,
           "pictures": [
-             
+            "8e6ea2fc-0262-44f8-ba78-6d9ab810adbe.webp",
+            "59de0974-a6ba-4de9-a444-c4b84dace46c.webp",
+            "bd6873d7-066b-4201-b4c5-c7f9271db36d.webp",
+            "cb79e4b7-5df1-455c-99fd-1e397c2fd0ef.webp",
+            "eb01d117-bf46-4e02-bca0-d4ad23a3e562.webp",
+            "f067e41a-e21f-405d-9d2d-28e9af39b75a.webp",
+            "fcb9b812-fca3-4043-b115-e0a19719eb28.webp"
           ]
         }
       ]
@@ -358,7 +426,13 @@
           ],
           "rating": 4.9,
           "pictures": [
-             
+            "9e29c314-8d06-43e1-9ffa-a362b3a4fef6.webp",
+            "74e1c75b-ec80-4076-b5c8-cfecd611ddc3.jpeg",
+            "0829bfe0-87b6-41c1-ade8-19f98b6935b3.webp",
+            "46157160-0047-4434-b5a5-6e7241431add.webp",
+            "be0c9726-1139-4870-8087-c6ecdc9e79f5.jpeg",
+            "dc6060c4-93a0-4e25-9ca2-9f1981861fbc.webp",
+            "eddba4b5-bdb5-47fe-a7fa-c7eab23531bf.jpeg"
           ]
         }
       ]
@@ -367,14 +441,14 @@
       "hostName": "Lucas Miller",
       "hostProperties": [
         {
-          "title": "Family-Friendly Townhome",
-          "location": "Brampton, ON, Canada",
+          "title": "Historic Old Town Apartment",
+          "location": "Montreal, QC, Canada",
           "guests": 6,
-          "bedrooms": 3,
-          "beds": 4,
-          "baths": 2.5,
-          "price": 130,
-          "description": "Bring the whole family to this welcoming Brampton townhome. With its kid-friendly amenities, fully equipped kitchen, and easy access to local attractions, it's ideal for a family vacation.",
+          "bedrooms": 2,
+          "beds": 3,
+          "baths": 1.5,
+          "price": 175,
+          "description": "Immerse yourself in the rich history of Old Montreal with a stay in this historic apartment. With exposed brick walls, a fully-equipped kitchen, and proximity to iconic sites like Notre-Dame Basilica, it's the perfect place to explore the city's past.",
           "bookedDates": [
             [
               "2023-01-15",
@@ -394,7 +468,21 @@
           ],
           "rating": 4.7,
           "pictures": [
-             
+            "4af29864-c55c-4dfa-82b8-325219fb4216.webp",
+            "0d9f1380-55e3-4041-a4de-b2d98d21c139.webp",
+            "5d31b62b-0107-46f1-aac9-2e27aac417e0.webp",
+            "0707981a-af73-4ccd-89b6-c7dc6cc7e4e3.webp",
+            "e21a796a-2df4-4549-89ca-9238f0e8ba5d.webp",
+            "e82d24fe-9d09-498c-a68e-d1f4b4907839.webp",
+            "ea6f32a0-1477-4b1f-852c-5295b33f3daa.webp",
+            "becf195d-9ca6-40f2-a6c9-9577f2637ca8.webp",
+            "b7dc6c09-a7dc-4219-845b-429d71eca23e.webp",
+            "543556a0-787c-4fce-a1c5-27f079f7c278.webp",
+            "82286da6-598a-40a6-a8b1-106171f1e065.webp",
+            "782b7923-695a-4b22-8875-263bd497644c.webp",
+            "527d690f-b58a-42fc-851f-cc6ac45522e4.webp",
+            "31aa2745-81be-4f4d-a6d8-adba04770fe4 (1).jpg",
+            "3cda413c-2752-495a-bb98-b2a8b5459016.webp"
           ]
         }
       ]
@@ -428,23 +516,29 @@
           ],
           "rating": 4.8,
           "pictures": [
-             
+            "1c784978-223d-4853-8ca4-47344475bf7b.webp",
+            "4bfb9ed4-4c03-40a2-b2e4-d7778a8c4b59.webp",
+            "77168f04-4fa5-44d6-93f8-a712073470da.webp",
+            "84527320-2884-484c-95fb-d97b708d31c7.webp",
+            "bac1f5d1-0295-4c23-90c0-4de6d73df279.webp",
+            "e9ed63ee-1e9e-4770-892c-276046d9894d.webp",
+            "e34be3e5-125f-47a5-ab45-2d9c40d4b0a4.webp"
           ]
         }
       ]
     },
     {
-      "hostName": "Liam Davis",
+      "hostName": "Hector Bernstorff",
       "hostProperties": [
         {
-          "title": "Prairie Oasis",
-          "location": "Saskatoon, SK, Canada",
-          "guests": 4,
-          "bedrooms": 2,
-          "beds": 3,
-          "baths": 1.5,
-          "price": 120,
-          "description": "Enjoy the vast Saskatchewan prairies in this peaceful oasis in Saskatoon. With a spacious backyard, fully-equipped kitchen, and easy access to local farmers' markets, it's a perfect retreat.",
+          "title": "Château-Style Mansion",
+          "location": "Montreal, QC, Canada",
+          "guests": 10,
+          "bedrooms": 5,
+          "beds": 6,
+          "baths": 4.5,
+          "price": 500,
+          "description": "Experience luxury in this château-style mansion nestled in the heart of Montreal. This grand property boasts spacious rooms, opulent decor, and a private garden. Perfect for large groups, special occasions, or those seeking the ultimate in comfort and style during their stay in the city.",
           "bookedDates": [
             [
               "2023-04-15",
@@ -463,7 +557,18 @@
           ],
           "rating": 4.9,
           "pictures": [
-             
+            "dadad68c-fe80-4625-a6f9-bb54496dbec2.webp",
+            "dd46f366-0d3b-4d6b-98a3-79da78d7a85b.webp",
+            "faae7bb8-31ce-4f69-a27f-884337bbe251.webp",
+            "6b68242f-1a6f-4b8e-b6c9-c6ffd71662f2.webp",
+            "24e3ef97-2fbd-4132-97a4-0ffaf41fdd0e.webp",
+            "79a3444a-1c41-449e-98b2-2c74f1fefd90.webp",
+            "87fa0c94-82fc-4a55-8154-69cd60b8a3f6.webp",
+            "939f7e6c-f282-4c41-ba99-26ad207ec490.webp",
+            "5642dafd-fbf9-4451-8afb-2f2182355dfc.webp",
+            "9267a153-e638-4021-9a79-9ec386490e6e.webp",
+            "c396f1aa-8ee1-470d-be5a-3bf465e0625c.webp",
+            "c7354ca2-4e80-4bfc-8c6a-f54a8c122f86.webp"
           ]
         }
       ]
@@ -502,7 +607,13 @@
           ],
           "rating": 4.8,
           "pictures": [
-             
+            "2ff3f69e-c90f-4c73-aa44-97a2b3742ef7.webp",
+            "7f2c5cc5-ac1f-4548-88dd-25ea4d4b9c35.webp",
+            "9b8f9540-9a56-4531-9951-87f21922b402.webp",
+            "bbe9a738-2297-4635-8bc2-dc66d7907953.webp",
+            "ef9b5070-bbc4-44d6-b262-4597f5e2d43a.webp",
+            "f224ba18-ed14-4ca9-af51-28ef9800516e.webp",
+            "fb15b0b0-9f31-498d-9059-923da5824d57.webp"
           ]
         }
       ]
@@ -537,7 +648,13 @@
           ],
           "rating": 4.9,
           "pictures": [
-             
+            "2a8ba891-d09f-4c71-8fa2-7ed1ec715a1e.webp",
+            "4ae08324-107d-40f6-909b-d17c1afedb37.webp",
+            "5e5a0b20-fe80-4bf4-91d1-36d4400b94bd.webp",
+            "8d12d23f-4b70-406f-8777-ebbe6cd5fcfe.webp",
+            "276febb8-995b-48ca-a41e-7c083b9a2121.webp",
+            "8455b751-8535-4ac6-9a39-5e09b8109553.webp",
+            "41325a1b-c531-4c97-9a34-cb03ee12808b.webp"
           ]
         }
       ]
@@ -572,7 +689,13 @@
           ],
           "rating": 4.7,
           "pictures": [
-             
+            "9cdd8de8-ded3-48a0-ab7c-33b05fdfb780.webp",
+            "42c3417d-3274-4f50-b687-fcd91cecb961.webp",
+            "782d2b06-829a-41aa-ba5a-374dac5efe4a.webp",
+            "a9458a85-c311-4db0-be35-66c285d29fe2.webp",
+            "b9f6d614-61b8-42b6-bb30-26534c33e0e2.webp",
+            "eee0e0bf-9fc8-4a5b-8136-a0a5b19c8a0b.webp",
+            "f52b6c3e-c142-4b7a-ad39-ec35c96d0224.webp"
           ]
         }
       ]
@@ -611,7 +734,13 @@
           ],
           "rating": 4.9,
           "pictures": [
-             
+            "83a6e735-d86d-4d9c-9c1d-861fd981b834.webp",
+            "5a2c1552-ba97-4c77-8593-0494c855e92c.webp",
+            "47f1cd54-71e5-48c0-acb0-78bd0881bc4b.webp",
+            "45053c7d-118b-4346-b7ee-672c26579f91.webp",
+            "9763176b-8016-480b-86c4-2c4d5f511247.webp",
+            "dfdd6115-c488-4d38-814e-74b253d8e9ca.webp",
+            "e48607d9-6956-4c8d-afc1-f7ca53290c2f.webp"
           ]
         }
       ]
@@ -645,7 +774,13 @@
           ],
           "rating": 4.8,
           "pictures": [
-             
+            "2b1871cd-ecfa-48d2-96fe-0c5018ed68b3.webp",
+            "6af922a7-54ba-439e-ac67-4eb108c5b2e5.webp",
+            "081712bf-df37-419a-9f0d-f3885d715a05.webp",
+            "821624d5-3917-4946-9681-152c4820eb9a.webp",
+            "39440642-91b2-410e-9ca1-dbec1f62d39c.webp",
+            "e8af6fc6-9d18-478d-b7ad-2b649aaefa4f.webp",
+            "f21d7976-1aae-4219-a4d1-47985b3e0fb2.webp"
           ]
         }
       ]
@@ -684,7 +819,14 @@
           ],
           "rating": 4.9,
           "pictures": [
-
+            "58235a8d-5f5a-4592-9bf5-020c16cf23f6.jpg",
+            "4c29c3c7-59b3-487c-af57-024ef1ec6339.webp",
+            "4dbe3120-31a8-4100-9068-a3d53d766e88.webp",
+            "9a05cc8a-f7af-4903-9125-2d930b2b759f.webp",
+            "9e5d02d7-8228-4577-bcce-aeb6783c8af8.webp",
+            "13860411-3162-4e4b-9cc0-ac4f0fcaed2a.webp",
+            "c0909550-e5cd-4e94-80bd-dd78bcacbd35.webp",
+            "f43d5f34-88ac-4e09-83cb-8c0d5d1c9e4d.webp"
           ]
         }
       ]
@@ -718,7 +860,14 @@
           ],
           "rating": 4.7,
           "pictures": [
-
+            "b0e18108-efd0-47de-97b1-305f33e8d5ef.webp",
+            "afd6201e-d627-4b29-afba-f16b928e2189.webp",
+            "288724b1-9e88-45b0-93e8-4b769cc21a0e.webp",
+            "33c34016-e67e-4738-a406-822a61a44f55.webp",
+            "31aa2745-81be-4f4d-a6d8-adba04770fe4.jpg",
+            "9f160aa5-d586-4d59-af88-e7a94d4ab569.webp",
+            "6ece74e6-6e73-4582-a2a4-c3124e051dd9.webp",
+            "0b2eb2ad-f445-441d-8aca-23c41c45a0c0.webp"
           ]
         }
       ]
@@ -754,7 +903,14 @@
           ],
           "rating": 4.9,
           "pictures": [
-
+            "e859ea2e-e08e-4c8a-bf72-96b783843998.webp",
+            "3804496e-ea0f-4b16-9d73-559b23a98da6.webp",
+            "59510ba8-5df9-406c-9ff0-0be727fff0f3.webp",
+            "59510ba8-5df9-406c-9ff0-0be727fff0f3.webp",
+            "379aa4c9-aa3d-48bd-b326-e66f1d1254e9.webp",
+            "74c8512f-955e-4ac0-a950-20467bf7330a.webp",
+            "68f344a6-9fb8-4f54-b11a-8c72b72d9b21.webp",
+            "37cab7bb-1cdd-4602-9eae-3f50b1a88b78.webp"
           ]
         }
       ]
@@ -793,7 +949,13 @@
           ],
           "rating": 4.8,
           "pictures": [
-
+            "9fd64401-11f4-4069-ac2e-ff490f992491.webp",
+            "6a684bee-5131-4528-b89f-61b7269fbd39.webp",
+            "58c5efbb-00bb-4e71-9e32-ec571b74b6e0.webp",
+            "58c64aea-fd33-4b78-911d-68dda09526c6.webp",
+            "93e7ba7f-7bbb-48c4-bab9-3ebae065265a.webp",
+            "dc04d091-9850-4d45-bdf6-71ae15e2f6c8.webp",
+            "e7329acf-add7-4312-a212-b47756cf6eec.webp"
           ]
         }
       ]
@@ -828,23 +990,29 @@
           ],
           "rating": 4.9,
           "pictures": [
-
+            "dbb38cc6-6d3b-4878-b5b4-7f97d8acfbe6.webp",
+            "aa5d86e7-b6ae-4b24-8453-91cbac862935.jpeg",
+            "678483ef-d3f9-46bb-9820-c42235de0a62.webp",
+            "6d293707-3889-4484-826f-8e323beb58dc.webp",
+            "2de1a5e8-6031-41e8-97df-1d97464914ee.webp",
+            "2a1e49ab-f385-4833-a2c6-6e79f877e01f.webp",
+            "0c98ad67-cb4a-4042-8a28-61cb3ae13a07.webp"
           ]
         }
       ]
     },
     {
-      "hostName": "Lucas Miller",
+      "hostName": "Maxwell Waters",
       "hostProperties": [
         {
-          "title": "Historic Old Town Apartment",
+          "title": "Floating River Houseboat",
           "location": "Montreal, QC, Canada",
-          "guests": 6,
-          "bedrooms": 2,
-          "beds": 3,
-          "baths": 1.5,
-          "price": 175,
-          "description": "Immerse yourself in the rich history of Old Montreal with a stay in this historic apartment. With exposed brick walls, a fully-equipped kitchen, and proximity to iconic sites like Notre-Dame Basilica, it's the perfect place to explore the city's past.",
+          "guests": 2,
+          "bedrooms": 1,
+          "beds": 1,
+          "baths": 1,
+          "price": 135,
+          "description": "Experience Montreal from a different perspective by staying in this charming river houseboat. Moored along the St. Lawrence River, this cozy houseboat offers unique waterfront views, a small kitchen, and a private deck where you can watch the boats go by. Ideal for a romantic getaway or those seeking a one-of-a-kind Montreal experience.",
           "bookedDates": [
             [
               "2023-07-10",
@@ -863,7 +1031,13 @@
           ],
           "rating": 4.7,
           "pictures": [
-
+            "ebbf249c-0b17-4e6f-b68f-3b14ff516528.webp",
+            "dfbeaeee-aa3c-4c3c-a42d-a5b945c6bbf1.webp",
+            "c96a241b-5e04-4580-81f0-9df2e58d3fb8.webp",
+            "4dbb69e6-ad09-4063-bf1b-c80f124d753f.webp",
+            "2ee43b01-90c7-42cc-b98a-8ab2b670be20.webp",
+            "1f5b853a-d13b-498a-9ced-e983fb75bfa6.webp",
+            "3189aa18-2229-4a7d-a0a2-487021428683.webp"
           ]
         }
       ]

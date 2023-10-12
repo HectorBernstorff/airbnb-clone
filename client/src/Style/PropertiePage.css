@@ -204,6 +204,7 @@ hr {
 
 .infoBelow {
     margin-bottom: 1.5rem;
+
 }
 
 .infoBelow h3 {
@@ -214,6 +215,11 @@ hr {
 .infoBelow span {
     font-size: 16px;
     color: rgb(0, 0, 0);
+}
+
+.infoBelow div {
+    display: flex;
+    gap: 0.25rem;
 }
 
 

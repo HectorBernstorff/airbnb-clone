@@ -428,13 +428,15 @@ export default function PropertiePage() {
                         <div className='description'>
                             <div className='infoBelow'>
                                 <h3>Entire cottage hosted by {hostname}</h3>
-                                <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
-                                <span>·</span>
-                                <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
-                                <span>·</span>
-                                <span className='bed'>{propertyData.hostProperties[0].beds} beds</span>
-                                <span>·</span>
-                                <span className='bath'>{propertyData.hostProperties[0].baths} baths</span>
+                                <div>
+                                    <span className='guest'>{propertyData.hostProperties[0].guests} guests</span>
+                                    <span>·</span>
+                                    <span className='bedroom'>{propertyData.hostProperties[0].bedrooms} bedrooms</span>
+                                    <span>·</span>
+                                    <span className='bed'>{propertyData.hostProperties[0].beds} beds</span>
+                                    <span>·</span>
+                                    <span className='bath'>{propertyData.hostProperties[0].baths} baths</span>
+                                </div>
                             </div>
                             <hr />
                             <div>
