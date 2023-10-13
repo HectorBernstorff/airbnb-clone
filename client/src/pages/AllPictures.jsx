@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 import '../styles/AllPictures.css'
 import { useNavigate } from 'react-router-dom';
-
 
 const AllPictures = () => {
     const location = useLocation();
@@ -13,9 +12,7 @@ const AllPictures = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Carregue os dados do servidor quando o componente for montado
         if (propertyData) {
-            // Load data only if propertyData is defined
             fetchData();
         }
     }, [propertyData]);
