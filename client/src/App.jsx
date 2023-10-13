@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import PropertiePage from './pages/PropertiePage';
-import AllPictures from './components/AllPictures'
+import AllPictures from './pages/AllPictures'
 import NotFound from './pages/NoPage'
 
 function App() {

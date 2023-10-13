@@ -46,10 +46,10 @@
           "title": "Luxury Waterfront Apartment",
           "location": "Vancouver, BC, Canada",
           "guests": "6",
-          "bedrooms": 3,
-          "beds": 4,
-          "baths": 2.5,
-          "price": 250,
+          "bedrooms": "3",
+          "beds": "4",
+          "baths": "2.5",
+          "price": "250",
           "description": "Immerse yourself in the beauty of Vancouver's waterfront with this luxury apartment. Wake up to stunning ocean views, relax on the private balcony, and take advantage of the building's amenities, including a pool and gym.",
           "bookedDates": [
             [

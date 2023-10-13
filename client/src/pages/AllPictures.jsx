@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 // import axios from 'axios';
-import '../Style/AllPictures.css'
+import '../styles/AllPictures.css'
 import { useNavigate } from 'react-router-dom';
 
 
