@@ -49,7 +49,8 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 4. Open your browser and visit [http://localhost:5176](http://localhost:5176) to access the Airbnb Clone.
 <br />
 
-  
+
+<br />
 **Contact**
 
 If you have any questions or would like to get in touch, please reach out to:
