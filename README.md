@@ -50,7 +50,7 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 <br />
 
 
-<br />
+---
 **Contact**
 
 If you have any questions or would like to get in touch, please reach out to:
