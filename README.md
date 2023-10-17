@@ -46,11 +46,11 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 
 - **cd server
 - **npm install
-- **npm run serve
+- **npm run dev
   
 <br />
 
-4. Open your browser and visit [http://localhost:5176](http://localhost:5176) to access the Airbnb Clone.
+4. Open your browser and visit [http://localhost:5173](http://localhost:5173) to access the Airbnb Clone.
 
 <br />
 
