@@ -8,21 +8,21 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 
 1. Clone the repository to your local machine:
 
-git clone https://github.com/yourusername/airbnb-clone.git
+- **git clone https://github.com/yourusername/airbnb-clone.git
 
 
 2. Start the client application:
 
-cd client
-npm install
-npm run dev
+- **cd client
+- **npm install
+- **npm run dev
 
 
 3. Start the server:
 
-cd server
-npm install
-npm run serve
+- **cd server
+- **npm install
+- **npm run serve
 
 
 4. Open your browser and visit [http://localhost:5176](http://localhost:5176) to access the Airbnb Clone.
