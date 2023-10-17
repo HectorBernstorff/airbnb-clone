@@ -56,6 +56,9 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 If you have any questions or would like to get in touch, please reach out to:
 
 👤 **Hector Bernstorff**
+
+
 📧 [hector.hmb@hotmail.com](mailto:hector.hmb@hotmail.com)
+
 
 Thank you for exploring the Airbnb Clone project!
