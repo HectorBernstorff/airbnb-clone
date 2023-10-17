@@ -3,6 +3,7 @@
 Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airbnb clone that helps users find and manage property listings. It features key functionalities like property browsing, filtering, viewing details, editing property information, and deletion. The project is built using Vite, React, Next.js, and Node.js to deliver a seamless user experience.
 
 
+
 ## Features
 
 - **Property Listings**: Explore a catalog of available properties.
@@ -10,6 +11,7 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 - **Property Details**: View detailed information and images for each property.
 - **Edit Property**: Update property information and images.
 - **Property Deletion**: Remove listings that are no longer available.
+
 
 
 ## Technologies Used
@@ -20,10 +22,12 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 - **Node.js**: Manages data storage and user actions efficiently.
 
 
+
 ## Folder Structure
 
 - `client/`: Contains the front-end React application.
 - `server/`: Houses the Node.js server for data handling and user actions.
+
 
 
 ## Getting Started
@@ -33,6 +37,7 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 1. Clone the repository to your local machine:
 
 - **git clone https://github.com/yourusername/airbnb-clone.git
+  
 
 2. Start the client application:
 
@@ -51,13 +56,6 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 4. Open your browser and visit [http://localhost:5176](http://localhost:5176) to access the Airbnb Clone.
 
 
-## Screenshots
-
-*Include screenshots here to showcase the project in action.*
-
-**Contributing**
-
-Contributions are welcome! Feel free to open issues or pull requests if you have any improvements or suggestions.
 
 **Contact**
 
