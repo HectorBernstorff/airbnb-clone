@@ -30,6 +30,7 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 
 *Note: Users need to have Node.js installed to run the app. You can download it from [https://nodejs.org/](https://nodejs.org/).*
 
+
 1. Clone the repository to your local machine:
 
 - **git clone https://github.com/yourusername/airbnb-clone.git
