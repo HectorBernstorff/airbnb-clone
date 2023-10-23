@@ -38,7 +38,6 @@ const AllPictures = () => {
                 <div className='innerAllPicturesGrid'>
                     {imageFileNames.map((imageName, index) => (
                         <img
-                            onClick={() => handleDeleteImage(imageName)}
                             key={index}
                             src={`http://localhost:5000/uploads/${imageName}`}
                             alt={`Property Image ${index + 1}`
