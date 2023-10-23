@@ -45,7 +45,7 @@
         {
           "title": "Luxury Waterfront Apartment",
           "location": "Vancouver, BC, Canada",
-          "guests": "6",
+          "guests": "71",
           "bedrooms": "3",
           "beds": "4",
           "baths": "2.5",
@@ -92,7 +92,7 @@
           "location": "Montreal, QC, Canada",
           "guests": 4,
           "bedrooms": 2,
-          "beds": 3,
+          "beds": "3",
           "baths": 1,
           "price": "120",
           "description": "Experience the unique charm of Montreal's Plateau neighborhood in this cozy duplex. Enjoy original hardwood floors, a fully-equipped kitchen, and a sunny patio. Just a short walk from trendy cafes and shops.",
