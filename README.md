@@ -4,9 +4,13 @@ Welcome to the Airbnb Clone GitHub repository. This project is a simplified Airb
 
 ## Screeshots
 ![Home](screenshots/Home.png)
+
 ![PropertyDetails](screenshots/PropertyDetails.png)
+
 ![EditProperty](screenshots/EditProperty.png)
+
 ![PropertyPictures](screenshots/PropertyPictures.png)
+
 ![Responsive](screenshots/Responsive.png)
 
 ## Features
